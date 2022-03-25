@@ -1,9 +1,11 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container w-75 m-auto">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">
+                <img src="../public/logo.png" alt="">
+            </a>
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
 
             <div class="collapse navbar-collapse m-auto" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
