@@ -37,13 +37,13 @@
 	$conn = new mysqli('localhost','mestervi_allatmentok','Allat2000','mestervi_allatmentok');
 	if (!$conn)
 	{
-		die("Connection failed!" . mysqli_connect_error());
+		die("Sikertelen kapcsolodas a szerverhez!" . mysqli_connect_error());
 	}
 	$sql = "INSERT INTO contact (id, nev, email, szoveg) VALUES ('0', '$nev', '$email', '$szoveg')";
 	$rs = mysqli_query($conn, $sql);
 	if($rs)
 	{
-		echo "Successfully saved";
+		echo "Az adatok mentve az adatbazisba!";
 	}
 	mysqli_close($conn);
 
