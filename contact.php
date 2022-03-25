@@ -5,7 +5,7 @@
 	</head>
 	<body>
 <?php
-	//szerver oldali ellenőrzés példa
+	// szerver oldali ellenőrzés példa
 
 	if(!isset($_POST['nev']) || strlen($_POST['nev']) < 5)
 	{
@@ -32,12 +32,20 @@
 	$email = $_POST["email"];
 	$szoveg = $_POST["szoveg"];
 
-	// Database connection
+	// Adatbazis kapcsolodas / mentes
 
-	$conn = new mysqli('https://server.fh2.hu/phpmyadmin','mestervi_allatmentok','Allat2000','mestervi_allatmentok');
-
-
-
+	$conn = new mysqli('localhost','mestervi_allatmentok','Allat2000','mestervi_allatmentok');
+	if (!$conn)
+	{
+		die("Sikertelen kapcsolodas a szerverhez!" . mysqli_connect_error());
+	}
+	$sql = "INSERT INTO contact (id, nev, email, szoveg) VALUES ('0', '$nev', '$email', '$szoveg')";
+	$rs = mysqli_query($conn, $sql);
+	if($rs)
+	{
+		echo "Az adatok mentve az adatbazisba!";
+	}
+	mysqli_close($conn);
 
 ?>
 	</body>
