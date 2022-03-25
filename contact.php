@@ -34,8 +34,19 @@
 
 	// Database connection
 
-	$conn = new mysqli('https://server.fh2.hu/phpmyadmin','mestervi_allatmentok','Allat2000','mestervi_allatmentok');
+	$conn = new mysqli('localhost','mestervi_allatmentok','Allat2000','mestervi_allatmentok');
+	if($conn->connect_error){
+		die('Sikertelen kapcsolodas : '.$conn->connect_error);
+	}else{
+		echo "Sikeres kapcsolodas a szerverhez...";
+		$stmt = $conn->prepare("instert into contact(nev, email, szoveg)values(?, ?, ?)");
+		$stmt->bind_parm("sss", $nev, $email, $szoveg);
+		$stmt->execute();
+		echo "Adatok elkuldve.";
+		$stmt->close();
+		$conn->close();
 
+	}
 
 
 
