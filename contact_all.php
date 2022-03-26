@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-	</head>
-	<body>
+
 <?php
+
     // include parser
     include './environment/envParser.php';
     (new DotEnv(__DIR__ . '/.env'))->load();
@@ -21,31 +17,32 @@
     }
     $sql = 'SELECT * FROM contact';
     $query = mysqli_query($conn, $sql);
-
+    // echo mysqli_fetch_array($query);
     if(!$query)
     {
         die ('error'.mysqli_error($conn));
     }
-        echo "
-        <table class='table'>
-        <tr>
-            <th>Nev</th>
-            <th>E-mail</th>
-            <th>Uzenet</th>
-        </tr>";
+    header('Content-Type: application/json; charset=utf-8');
+    $res = mysqli_fetch_array($query);
+    echo json_encode($res);
+        // echo "
+        // <table class='table'>
+        // <tr>
+        //     <th>Nev</th>
+        //     <th>E-mail</th>
+        //     <th>Uzenet</th>
+        // </tr>";
 
-        while ($row = mysqli_fetch_array($query))
-        {
-            echo "<tr>
-            <td>$row[nev]</td>
-            <td>$row[email]</td>
-            <td>$row[szoveg]</td>
-            </tr>";
-        }
-        echo "</table>";
-    
+        // while ($row = mysqli_fetch_array($query))
+        // {
+        //     echo "<tr>
+        //     <td>$row[nev]</td>
+        //     <td>$row[email]</td>
+        //     <td>$row[szoveg]</td>
+        //     </tr>";
+        // }
+        // echo "</table>";
+    // $res = $query;
     mysqli_close($conn);
 
 ?>
-	</body>
-</html>
