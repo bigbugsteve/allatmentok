@@ -21,7 +21,7 @@
     <?php include("includes/navigation.php"); ?>
 
     <div class="container">
-        Hello állatmentők
+        about page
     </div>
 </body>
 

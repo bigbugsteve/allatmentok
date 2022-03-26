@@ -1,32 +1,37 @@
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container w-75 m-auto">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">
+                <img src="../public/logo.png" alt="">
+            </a>
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
 
             <div class="collapse navbar-collapse m-auto" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item mx-3 active">
                         <a class="nav-link" href="#">Rólunk <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
                         <a class="nav-link" href="#">Hogyan segíthetsz</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
                         <a class="nav-link" href="#">Hírek</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
                         <a class="nav-link" href="#">Események</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
                         <a class="nav-link" href="#">Projektek</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
                         <a class="nav-link" href="#">Partnerek</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Kapcsolat</a>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="contact.php">Kapcsolat</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="contact_all.php">Összes üzenet</a>
                     </li>
                 </ul>
             </div>
