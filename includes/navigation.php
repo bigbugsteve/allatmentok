@@ -28,7 +28,10 @@
                         <a class="nav-link" href="#">Partnerek</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="#">Kapcsolat</a>
+                        <a class="nav-link" href="contact.php">Kapcsolat</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="contact_all.php">Összes üzenet</a>
                     </li>
                 </ul>
             </div>
