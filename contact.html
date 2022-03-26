@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Kapcsolat</h1>
-    <form name="kapcsolat" action="contact.php" onsubmit="return ellenoriz();" method="post">
+    <form name="kapcsolat" action="contact.php" onsubmit="ellenoriz()" method="post">
         <div>
             <label><input type="text" id="nev" name="nev" size="20" maxlength="40">Név (minimum 5 karakter): </label>
             <br/>
@@ -17,8 +17,9 @@
             <br/>
             <label> <textarea id="szoveg" name="szoveg" cols="40" rows="10"></textarea> Üzenet (kötelező): </label>
             <br/>
+            <div onclick="fetchApi()">Hello</div>
             <input id="kuld" type="submit" value="Küld">
-            <button onclick="ellenoriz();" type="button">Ellenőriz</button>
+            <button onclick="ellenoriz()" type="button">Ellenőriz</button>
         </div>
     </form>
 </body>

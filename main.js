@@ -4,6 +4,14 @@ window.onload = function() {
 		kuld.disabled = true;
 	}
 };
+
+
+const fetchApi = async () => {
+	console.log('Helloo')
+	const res = await fetch('http://localhost/allatmentok/contact_all.php').then(res => res)
+      console.log(" 🚀 ~ file: main.js ~ line 11 ~ fetchApi ~ res", res)
+}
+
 function ellenoriz() {
 	var rendben = true;
 	var fokusz = null;
