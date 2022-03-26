@@ -31,3 +31,12 @@ A forrásokat feltöltve a helyi web szerver (XAMPP) munka-könyvtárába az alk
 
 Összesen: 	20 pont
 
+Menus:
+    - Fooldal (kis bemutatkozas, 2 video, google maps)
+    - Galeria (images mappaban levo kepeket mutatja meg)
+    - Kepfeltolto ()
+    - Kapcsolat (nev, email, uzenet)
+    - Bekuldott uzenetek (id szerint rendezve, bekuldes datumat kell megmutatni, anonymus true/false)
+    - Regisztracio (tunjon el ha be van jelentkezve)
+    - Belepes (alakuljon at kilepesse ha be van jelentkezve)
+    - Eredeti webre mutato link => https://www.allatmentok.hu/
