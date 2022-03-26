@@ -16,7 +16,7 @@
                         <a class="nav-link" href="#">Hogyan segíthetsz</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="#">Hírek</a>
+                        <a class="nav-link" href="gallery.php">Galéria</a>
                     </li>
                     <li class="nav-item mx-3">
                         <a class="nav-link" href="#">Események</a>
