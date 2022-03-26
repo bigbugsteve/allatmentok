@@ -1,0 +1,33 @@
+☐ 1.	Valósítsa meg a weboldalt a Front Controller dinamikus tervezési minta (Kötelező elem!) alkalmazásával. 
+- minden menüpont esetén az index.php fájlt hívja meg
+- menüneveket és közös adatokat konfigurációs fájlból olvassa be egy TÖMB-ből (array).
+A forráskód a lehető legjobban használja ki a HTML5 lehetőségeit. Az oldalon vízszintes menüt használjon. Legyen a fejlesztett weboldalon egy link a választott szervezet weboldalára, amelyről elég a főoldalt és még egy aloldalt átvenni. (2 pont)
+☐ 2.	Bővítse a választott főoldalt két videóval, egyet saját könyvtárából, és egyet szolgáltatótól (pl. Youtube), és a saját könyvtárában lévő video ne legyen több mint 5 mp, a méretkorlát miatt. (2 pont)
+Az oldalra tegyen egy Google térképet is, ami megmutatja a választott szervezet címét. 
+A további oldalakat a következő pontok szerint alakítsa ki:
+☐ 3.	Készítsen egy harmadik oldalt képek, képgaléria tárolására. Legyen lehetőség új képek feltöltésére. Képfeltöltést csak bejelentkezett felhasználó tehet meg.  (2 pont)
+✔ 4.	A negyedik oldalon legyen egy kapcsolat űrlap, amelynek segítségével e-mailt lehet küldeni az oldal tulajdonosa számára, de az e-mail küldése helyett jelenítse meg az adatokat egy új (ötödik) oldal tartalmaként. Ellenőrizze megfelelően az űrlap helyes kitöltését. Az ellenőrzést végezze el kliens- és szerveroldalon is (JavaScript, PHP). A HTML kódban ne ellenőrizze az űrlap adatait. Az elküldött Űrlap adatokat ezen kívül mentse le adatbázisba is. (2 pont) @done (2022. 03. 26. 14:44:23)
+☐ 5.	Tegye lehetővé megtekinteni egy hatodik oldalon táblázatban az előző pontban elküldött üzeneteket az adatbázisból fordított időrend szerint (a legfrissebb legyen elől). (2 pont)
+Írják minden üzenethez a küldés idejét és az üzenetküldő nevét. Ha nem bejelentkezett felhasználó írta, akkor: "Vendég"
+☐ 6.	Regisztráció, Belépés, Kilépés. Bővítsük a honlapot „Belépés” és „Kilépés” menüponttal a következők szerint:
+a) A „Belépés” menüpont akkor látható, ha nincs bejelentkezve a felhasználó.
+b) A „Kilépés” menüpont akkor látható, ha be van jelentkezve a felhasználó.
+c) A „Belépés” menüpontra kattintva feljön egy oldal, ahol lehet bejelentkezni vagy regisztrálni.
+d) Regisztrációkor nem léptetjük be automatikusan a felhasználót.
+e) A rendszer fejlécen jelenítse meg a bejelentkezett felhasználót, ha be van lépve, a következő formában: Bejelentkezett: Családi_név Utónév (Login_név)	(2 pont)
+☐ 7.	Alkalmazásában használja a Reszponzív tervezést Bootstrap keretrendszerrel (2 pont)
+☐ 8.	Alkalmazását töltse fel és valósítsa meg Internetes tárhelyen is. Bármelyik tárhely-szolgáltatót használhatja. (Kötelező elem! A működés ez alapján lesz javítva) 	(2 pont)
+☐ 9.	Használja a GitHub verziókövető rendszert (https://github.com/). 	(2 pont)
+(Kötelező elem! A forrás ez alapján lesz javítva) Ne csak a kész alkalmazást töltse fel egy lépésben, hanem a részállapotokat is legalább 5 lépésben. 
+A GitHub-on a projektmunka módszert alkalmazzák: látszódjék, hogy a csoport tagjai melyik részt készítették el.
+
+Készítsen legalább 10 oldalas dokumentációt, amiben leírja az alkalmazás működését (2 pont) képernyőképekkel. A dokumentációban adja meg a tárhely és a GitHub projektjének URL címét és írja le részletesen, hogy az előző feladatpontokat az alkalmazásban hogy és hol valósította meg. Fontos, hogy ez utóbbit leírja a dokumentációban, mert a feladat ez alapján lesz javítva.
+A dokumentációban adja meg az internetes tárhely és adatbázis belépéséhez szükséges FTP és URL címet, felhasználónevet és jelszót, ami szükséges a megoldás ellenőrzéséhez, valamint a GitHub címét.
+
+Be kell adni a Neptun MeetStreet-en keresztül egy tömörített (zip kiterjesztésű) fájlban a weboldal forrásait, a szükséges MySql adatbázist létrehozó szkriptet és a dokumentációt. 
+Akik közösen csinálják, mindenki adja be a megoldást.
+
+A forrásokat feltöltve a helyi web szerver (XAMPP) munka-könyvtárába az alkalmazás működőképes legyen. 
+
+Összesen: 	20 pont
+
