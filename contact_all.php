@@ -10,7 +10,7 @@
     {
         die("Sikertelen kapcsolodas a szerverhez!" . mysqli_connect_error());
     }
-    $sql = 'SELECT * FROM contact';
+    $sql = 'SELECT * FROM contact ORDER BY id DESC';
     $query = mysqli_query($conn, $sql);
 
     if(!$query)

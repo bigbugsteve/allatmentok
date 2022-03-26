@@ -2,8 +2,8 @@
 - minden menüpont esetén az index.php fájlt hívja meg
 - menüneveket és közös adatokat konfigurációs fájlból olvassa be egy TÖMB-ből (array).
 A forráskód a lehető legjobban használja ki a HTML5 lehetőségeit. Az oldalon vízszintes menüt használjon. Legyen a fejlesztett weboldalon egy link a választott szervezet weboldalára, amelyről elég a főoldalt és még egy aloldalt átvenni. (2 pont)
-☐ 2.	Bővítse a választott főoldalt két videóval, egyet saját könyvtárából, és egyet szolgáltatótól (pl. Youtube), és a saját könyvtárában lévő video ne legyen több mint 5 mp, a méretkorlát miatt. (2 pont)
-Az oldalra tegyen egy Google térképet is, ami megmutatja a választott szervezet címét. 
+✔ 2.	Bővítse a választott főoldalt két videóval, egyet saját könyvtárából, és egyet szolgáltatótól (pl. Youtube), és a saját könyvtárában lévő video ne legyen több mint 5 mp, a méretkorlát miatt. (2 pont) @done (2022. 03. 26. 15:25:33)
+✔ Az oldalra tegyen egy Google térképet is, ami megmutatja a választott szervezet címét. @done (2022. 03. 26. 15:25:51)
 A további oldalakat a következő pontok szerint alakítsa ki:
 ☐ 3.	Készítsen egy harmadik oldalt képek, képgaléria tárolására. Legyen lehetőség új képek feltöltésére. Képfeltöltést csak bejelentkezett felhasználó tehet meg.  (2 pont)
 ✔ 4.	A negyedik oldalon legyen egy kapcsolat űrlap, amelynek segítségével e-mailt lehet küldeni az oldal tulajdonosa számára, de az e-mail küldése helyett jelenítse meg az adatokat egy új (ötödik) oldal tartalmaként. Ellenőrizze megfelelően az űrlap helyes kitöltését. Az ellenőrzést végezze el kliens- és szerveroldalon is (JavaScript, PHP). A HTML kódban ne ellenőrizze az űrlap adatait. Az elküldött Űrlap adatokat ezen kívül mentse le adatbázisba is. (2 pont) @done (2022. 03. 26. 14:44:23)
