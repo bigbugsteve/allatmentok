@@ -28,9 +28,12 @@
 	var_dump($_POST);
 	echo "</pre>";
 
-	$nev = $_POST["nev"];
+	$name = $_POST["nev"];
 	$email = $_POST["email"];
-	$szoveg = $_POST["szoveg"];
+	$message = $_POST["szoveg"];
+	$anonym = 0;
+	$date = date('Y-m-d H:i');
+
 
 	// Adatbazis kapcsolodas / mentes
 
@@ -39,11 +42,12 @@
 	{
 		die("Sikertelen kapcsolodas a szerverhez!" . mysqli_connect_error());
 	}
-	$sql = "INSERT INTO contact (id, nev, email, szoveg) VALUES ('0', '$nev', '$email', '$szoveg')";
+	$sql = "INSERT INTO contact (id, name, email, message, anonym, date) VALUES ('0', '$name', '$email', '$message', '$anonym', '$date')";
 	$rs = mysqli_query($conn, $sql);
 	if($rs)
 	{
-		echo "Az adatok mentve az adatbazisba!";
+		echo "Az adatok mentve az adatbazisba! ";
+		echo $date;
 	}
 	mysqli_close($conn);
 
