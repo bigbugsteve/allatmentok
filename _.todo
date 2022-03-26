@@ -7,8 +7,8 @@ A forráskód a lehető legjobban használja ki a HTML5 lehetőségeit. Az oldal
 A további oldalakat a következő pontok szerint alakítsa ki:
 ☐ 3.	Készítsen egy harmadik oldalt képek, képgaléria tárolására. Legyen lehetőség új képek feltöltésére. Képfeltöltést csak bejelentkezett felhasználó tehet meg.  (2 pont)
 ✔ 4.	A negyedik oldalon legyen egy kapcsolat űrlap, amelynek segítségével e-mailt lehet küldeni az oldal tulajdonosa számára, de az e-mail küldése helyett jelenítse meg az adatokat egy új (ötödik) oldal tartalmaként. Ellenőrizze megfelelően az űrlap helyes kitöltését. Az ellenőrzést végezze el kliens- és szerveroldalon is (JavaScript, PHP). A HTML kódban ne ellenőrizze az űrlap adatait. Az elküldött Űrlap adatokat ezen kívül mentse le adatbázisba is. (2 pont) @done (2022. 03. 26. 14:44:23)
-☐ 5.	Tegye lehetővé megtekinteni egy hatodik oldalon táblázatban az előző pontban elküldött üzeneteket az adatbázisból fordított időrend szerint (a legfrissebb legyen elől). (2 pont)
-Írják minden üzenethez a küldés idejét és az üzenetküldő nevét. Ha nem bejelentkezett felhasználó írta, akkor: "Vendég"
+✔ 5.	Tegye lehetővé megtekinteni egy hatodik oldalon táblázatban az előző pontban elküldött üzeneteket az adatbázisból fordított időrend szerint (a legfrissebb legyen elől). (2 pont) @done (2022. 03. 26. 15:32:33)
+☐ Írják minden üzenethez a küldés idejét és az üzenetküldő nevét. Ha nem bejelentkezett felhasználó írta, akkor: "Vendég"
 ☐ 6.	Regisztráció, Belépés, Kilépés. Bővítsük a honlapot „Belépés” és „Kilépés” menüponttal a következők szerint:
 a) A „Belépés” menüpont akkor látható, ha nincs bejelentkezve a felhasználó.
 b) A „Kilépés” menüpont akkor látható, ha be van jelentkezve a felhasználó.
