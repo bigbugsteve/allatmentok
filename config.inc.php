@@ -1,7 +1,7 @@
 <?php
-    $MAPPA = './kepek/';
-    $TIPUSOK = array ('.jpg', '.png');
-    $MEDIATIPUSOK = array('image/jpeg', 'image/png');
-    $DATUMFORMA = "Y.m.d. H:i";
-    $MAXMERET = 500*1024;
+    $FOLDER = './kepek/';
+    $TYPES = array ('.jpg', '.png');
+    $MEDIATYPES = array('image/jpeg', 'image/png');
+    $DATEFORM = "Y.m.d. H:i";
+    $MAXSIZE = 500*1024;
 ?>
