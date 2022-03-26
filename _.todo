@@ -31,7 +31,7 @@ A forrásokat feltöltve a helyi web szerver (XAMPP) munka-könyvtárába az alk
 
 Összesen: 	20 pont
 
-Menus:
+Menu:
     - Fooldal (kis bemutatkozas, 2 video, google maps)
     - Galeria (images mappaban levo kepeket mutatja meg)
     - Kepfeltolto ()
@@ -40,3 +40,6 @@ Menus:
     - Regisztracio (tunjon el ha be van jelentkezve)
     - Belepes (alakuljon at kilepesse ha be van jelentkezve)
     - Eredeti webre mutato link => https://www.allatmentok.hu/
+
+Linkek:
+https://server.fh2.hu/phpmyadmin/
