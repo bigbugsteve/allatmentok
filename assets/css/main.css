@@ -3,6 +3,10 @@
   margin: 2rem auto;
 }
 
+.login-component {
+  background-color: black;
+}
+
 .page__container {
   min-height: 100vh;
   display: -webkit-box;

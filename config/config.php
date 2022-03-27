@@ -21,6 +21,7 @@ $pages = array(
       'contact' => array('file' => 'contact', 'text' => 'Kapcsolat', 'menun' => array(1, 1)),
       'gallery' => array('file' => 'gallery', 'text' => 'Galéria', 'menun' => array(1, 1)),
       'login' => array('file' => 'login', 'text' => 'Belépés', 'menun' => array(1, 0)),
+      'loggedIn' => array('file' => 'loggedIn', 'text' => '', 'menun' => array(1, 0)),
       'logout' => array('file' => 'logout', 'text' => 'Kilépés', 'menun' => array(0, 1)),
       'registration' => array('file' => 'registration', 'text' => 'Regisztráció', 'menun' => array(0, 0))
 );

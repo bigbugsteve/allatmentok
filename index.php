@@ -1,6 +1,9 @@
 <?php
 include('./config/config.php');
 
+include './environment/envParser.php';
+    (new DotEnv(__DIR__ . '/.env'))->load();
+
 $currentPage = $pages['/'];
 
 if (isset($_GET['page'])) {

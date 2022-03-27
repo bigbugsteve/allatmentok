@@ -1,1 +1,1 @@
-<div>Hello</div>
+<?php echo implode($_SESSION) ?>
