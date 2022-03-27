@@ -1,4 +1,3 @@
-
 <?php
 
     // include parser
@@ -22,28 +21,27 @@
     {
         die ('error'.mysqli_error($conn));
     }
-    header('Content-Type: application/json; charset=utf-8');
-    // mysqli_fetch_object()
-    $res = mysqli_fetch_object($query);
-    echo json_encode($res);
-        // echo "
-        // <table class='table'>
-        // <tr>
-        //     <th>Nev</th>
-        //     <th>E-mail</th>
-        //     <th>Uzenet</th>
-        // </tr>";
+    // header('Content-Type: application/json; charset=utf-8');
+    // $res = mysqli_fetch_array($query);
+    // echo json_encode($res);
+        echo "
+        <table class='table'>
+        <tr>
+             <th>Nev</th>
+             <th>E-mail</th>
+             <th>Uzenet</th>
+             <th>Datum</th>
+         </tr>";
 
-        // while ($row = mysqli_fetch_array($query))
-        // {
-        //     echo "<tr>
-        //     <td>$row[nev]</td>
-        //     <td>$row[email]</td>
-        //     <td>$row[szoveg]</td>
-        //     </tr>";
-        // }
-        // echo "</table>";
+         while ($row = mysqli_fetch_array($query))
+         {
+             echo "<tr>
+             <td>$row[name]</td>
+             <td>$row[email]</td>
+             <td>$row[message]</td>
+             <td>$row[date]</td>
+             </tr>";
+         }
+         echo "</table>";
     // $res = $query;
     mysqli_close($conn);
-
-?>
