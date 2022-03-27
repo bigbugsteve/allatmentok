@@ -12,7 +12,7 @@
     closedir($reader);
 ?>
 
-<div class="bg-blue text-white text-center text-size-large">
+<div class="bg-purple text-white text-center text-size-large">
     <p>Galéria</p>
 </div>
     <div class="gallery">
@@ -27,7 +27,7 @@
         <div class="card-body">
             <h5 class="card-title">Név:  <?php echo $file; ?></h5>
             <p class="card-text">Dátum:  <?php echo date($DATEFORM, $date); ?></p>
-            <a href="<?php echo $FOLDER.$file ?>" class="btn btn-primary bg-blue">Megnyitás</a>
+            <a href="<?php echo $FOLDER.$file ?>" class="btn btn-primary bg-purple">Megnyitás</a>
         </div>
         </div>
 
