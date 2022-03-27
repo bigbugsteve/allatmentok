@@ -31,20 +31,27 @@
     </div>
     <div class="bg-blue text-white padding30 text-center">
         <div class="text-size-large"><p>VIDEÓK</p></div>
-        <table class="table-center">
-            <tr>
-                <th>Sajat video</th>
-                <th>YouTube video</th>
-            </tr>
-            <tr>
-                <th><video controls width="560">
-                    <source src="video/flower.mp4" type="video/mp4">
-                    Sorry, your browser doesn't support embedded videos.
-                    </video></th>
-                <th><iframe width="560" height="315" src="https://www.youtube.com/embed/i810CxN5Q6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></th>
-            </tr>
-        </table>
+        <div class="video">
+            <div class="card" style="width: 580px; padding: 10px;">
+                        <video controls width="560">
+                        <source src="video/flower.mp4" type="video/mp4">
+                        Sorry, your browser doesn't support embedded videos.
+                        </video>
+                <div class="card-body">
+                    <h5 class="card-title text-blue">Sajat video</h5>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <div class="card" style="width: 580px; padding: 10px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/i810CxN5Q6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="card-body">
+                    <h5 class="card-title text-blue">YouTube video</h5>
+                </div>
+            </div>
+        </div>
     </div>
+
     <div class="bg-white text-blue padding30">
     <div class="text-size-large text-center"><p>ITT TALÁLSZ MINKET</p></div>
         <div class="left560">

@@ -54,7 +54,7 @@
             <a href="<?php echo $FOLDER.$file ?>" class="btn btn-primary">Megnyitás</a>
         </div>
         </div>
-        </div>
+    </div>
     <?php
     }
     ?>
