@@ -18,12 +18,13 @@
     $sql = 'SELECT * FROM contact ORDER BY id DESC';
     $query = mysqli_query($conn, $sql);
     // echo mysqli_fetch_array($query);
-    if(!$query)
+    if(!$query) // TODO refaktoráld ezt a részt
     {
         die ('error'.mysqli_error($conn));
     }
     header('Content-Type: application/json; charset=utf-8');
-    $res = mysqli_fetch_array($query);
+    // mysqli_fetch_object()
+    $res = mysqli_fetch_object($query);
     echo json_encode($res);
         // echo "
         // <table class='table'>

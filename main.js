@@ -5,11 +5,9 @@ window.onload = function() {
 	}
 };
 
-
 const fetchApi = async () => {
 	console.log('Helloo')
-	const res = await fetch('http://localhost/allatmentok/contact_all.php').then(res => res)
-      console.log(" 🚀 ~ file: main.js ~ line 11 ~ fetchApi ~ res", res)
+	const res = await fetch('http://localhost/allatmentok/contact_all.php').then(res => res.json()).then(res => console.log(res))
 }
 
 function ellenoriz() {

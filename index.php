@@ -1,30 +1,18 @@
-<?php ?>
-<!DOCTYPE html>
-<html>
+<?php
+include('./config/config.php');
 
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetovált Állatmentők</title>
-</head>
-<style>
-    body {
-        position: relative;
-        height: 300vh;
-    }
-</style>
+$currentPage = $pages['/'];
 
-<body>
+if (isset($_GET['page'])) {
+	if (isset($pages[$_GET['page']]) && file_exists("./src/pages/{$pages[$_GET['page']]['file']}.php")) {
+		$currentPage = $pages[$_GET['page']];
+	}
 
-    <?php include("includes/navigation.php"); ?>
+	else { 
+		$currentPage = $hiba_oldal;
+		header("HTTP/1.0 404 Not Found");
+	}
+}
 
-    <div class="container">
-        Hello állatmentők
-    </div>
-</body>
-
-
-
-</html>
+include('./src/pages/index.php'); 
+?>
