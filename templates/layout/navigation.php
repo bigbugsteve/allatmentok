@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white text-blue sticky-top">
 	<div class="container w-75 m-auto">
 		<a class="navbar-brand" href="#">
 			<!-- <img src="../public/logo.png" alt=""> -->
@@ -14,12 +14,12 @@
 						<?php if (!isset($_SESSION['login']) && $page['menun'][0] || isset($_SESSION['login']) && $page['menun'][1]) { ?>
 							<!-- <li<?= (($page == $currentPage) ? ' class="active"' : '') ?>> -->
 							<li class="<?$page == $currentPage ? 'active nav-item mx-3 active' : 'nav-item mx-3 active' ?>">
-								<a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
+								<a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>" class="text-blue">
 									<?= $page['text'] ?></a>
 								</li>
 						<?php } ?>
 					<?php } ?>
-				<li class="nav-item mx-3 active">
+				<!-- <li class="nav-item mx-3 active">
 					<a class="nav-link" href="#">Rólunk <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item mx-3">
@@ -42,7 +42,7 @@
 				</li>
 				<li class="nav-item mx-3">
 					<a class="nav-link" href="contact_all.php">Összes üzenet</a>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</div>
