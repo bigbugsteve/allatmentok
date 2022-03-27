@@ -1,6 +1,6 @@
 
 <div class="global-container">
-    <img class="cover" src="assets/img/cover.png" width=100%>
+    <img class="cover" src="assets/img/cover.PNG" width=100%>
 
     <div class="buttons bg-blue text-white padding30">
         BUTTONS
