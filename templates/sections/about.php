@@ -2,7 +2,7 @@
 <div class="about__container bg-purple text-white">
     <div class="about__wrapper d-flex">
         <div class="about__logo w-25 d-flex ">
-            <img src="assets/images/tetovalt_logo.png" alt="" class="w-50 m-auto">
+            <img src="assets/images/tetovalt_logo.png" alt="" class="w-75 m-auto">
         </div>
         <div class="about__text p-5 w-75">
             <h2>A Tetovált Állatmentők</h2>

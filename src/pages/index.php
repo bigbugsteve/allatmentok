@@ -27,10 +27,13 @@
 
 <body>
     <div class="page__container">
+
         <?php include("templates/layout/navigation.php"); ?>
+
         <div class="wrapper">
             <?php include("{$currentPage['file']}.php") ?>
         </div>
+        
         <?php include("templates/layout/footer.php"); ?>
     </div>
 </body>
