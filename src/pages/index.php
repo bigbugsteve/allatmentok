@@ -2,7 +2,7 @@
 <?php if (file_exists('src/controller/' . $currentPage['file'] . '.php')) {
 	include("src/controller/{$currentPage['file']}.php");
     
-} else echo "nincs controller" ?>
+} else echo "ehhez nincs controller" ?>
 
 <!DOCTYPE html>
 <html>

@@ -6,12 +6,12 @@ $db_password = getenv('DB_PASSWORD');
 
 if(isset($_POST['email']) && isset($_POST['password'])) {
 	try {
-        // Kapcsolódás
+        // Csatlakozás az adatbázishoz
         $dbh = new PDO("mysql:host=$dbserver;dbname=$db", $db_user, $db_password,
                         array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
         $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
         
-        // Felhsználó keresése
+        // Felhasználó keresése
         $sqlSelect = "select id, firstName, lastName, gender, email from user where email = :email and password = :password;";
 		echo $sqlSelect;
         $sth = $dbh->prepare($sqlSelect);
@@ -24,6 +24,7 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
 		echo $_SESSION;
     }
     catch (PDOException $e) {
+        echo $e;
         $errormessage = "Hiba: ".$e->getMessage();
     }  
     // echo $row;    

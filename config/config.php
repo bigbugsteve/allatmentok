@@ -15,6 +15,8 @@ $lablec = array(
       'ceg' => 'Mini honlap Kft.'
 );
 
+$IMAGES = 'assets/images/';
+
 $pages = array(
       '/' => array('file' => 'home', 'text' => 'Főoldal', 'menun' => array(1, 1)),
       'about' => array('file' => 'about', 'text' => 'Rólunk', 'menun' => array(1, 1)),
