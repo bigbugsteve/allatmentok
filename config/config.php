@@ -16,6 +16,8 @@ $lablec = array(
 );
 
 $IMAGES = 'assets/images/';
+$GALLERY = 'assets/images/gallery/';
+$TYPES = array ('.jpg', '.png');
 
 $pages = array(
       '/' => array('file' => 'home', 'text' => 'Főoldal', 'menun' => array(1, 1)),
@@ -25,6 +27,7 @@ $pages = array(
       'login' => array('file' => 'login', 'text' => 'Belépés', 'menun' => array(1, 0)),
       'loggedIn' => array('file' => 'loggedIn', 'text' => '', 'menun' => array(1, 0)),
       'logout' => array('file' => 'logout', 'text' => 'Kilépés', 'menun' => array(0, 1)),
+      'messageSent' => array('file' => 'messageSent', 'text' => 'Üzenetküldés sikeres', 'menun' => array(0, 1)),
       'registration' => array('file' => 'registration', 'text' => 'Regisztráció', 'menun' => array(0, 0))
 );
 

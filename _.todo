@@ -17,7 +17,7 @@ d) Regisztrációkor nem léptetjük be automatikusan a felhasználót.
 e) A rendszer fejlécen jelenítse meg a bejelentkezett felhasználót, ha be van lépve, a következő formában: Bejelentkezett: Családi_név Utónév (Login_név)	(2 pont)
 ☐ 7.	Alkalmazásában használja a Reszponzív tervezést Bootstrap keretrendszerrel (2 pont)
 ☐ 8.	Alkalmazását töltse fel és valósítsa meg Internetes tárhelyen is. Bármelyik tárhely-szolgáltatót használhatja. (Kötelező elem! A működés ez alapján lesz javítva) 	(2 pont)
-☐ 9.	Használja a GitHub verziókövető rendszert (https://github.com/). 	(2 pont)
+✔ 9.	Használja a GitHub verziókövető rendszert (https://github.com/). 	(2 pont)
 (Kötelező elem! A forrás ez alapján lesz javítva) Ne csak a kész alkalmazást töltse fel egy lépésben, hanem a részállapotokat is legalább 5 lépésben. 
 A GitHub-on a projektmunka módszert alkalmazzák: látszódjék, hogy a csoport tagjai melyik részt készítették el.
 

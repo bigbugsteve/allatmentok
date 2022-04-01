@@ -1,9 +1,8 @@
 import ValidateFields from './validation.js';
 
-// var fieldValidation = new ValidateFields()
+const contactName = document.getElementById("contactName");
 
-ValidateFields.validateLoginFields();
-console.log(" 🚀 ~ file: main.js ~ line 4 ~ fieldValidation", fieldValidation)
+contactName.addEventListener("change", function(e){ValidateFields.validateName(e)})
 
 window.onload = function() {
 	var kuld = document.getElementById("kuld");

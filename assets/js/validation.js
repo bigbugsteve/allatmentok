@@ -1,5 +1,5 @@
 export default class ValidateFields {
-      static validateLoginFields() {
-        console.log('hello world');
+      static validateName(e) {
+        console.log("hello world", e.target.value)
       }
     }

@@ -10,7 +10,7 @@
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <script type="module" src="./assets/js/main.js"></script>
+    <!-- <script type="module" src="./assets/js/main.js"></script> -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
     <!-- <link rel="shortcut icon" href="../../assets//images/favicon.png"> -->
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -37,6 +37,7 @@
         
         <?php include("templates/layout/footer.php"); ?>
     </div>
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 
