@@ -4,22 +4,13 @@
         <?php include("templates/sections/services.php") ?>
         <?php include("templates/sections/about.php") ?>
         <?php include("templates/sections/help.php") ?>
+        <?php include("templates/sections/events.php") ?>
         <?php include("templates/sections/map.php") ?>
 
         <div class="global-container">
 
             <div class="bg-purple text-white">
-                <div class="bg-white text-blue text-center padding30">
-                    <div class="text-size-large">
-                        <p>ESEMÉNYEK</p>
-                    </div>
-                    <div class="text-size-medium">
-                        <a href="http://">LINK</a><br>
-                        <a href="http://">LINK</a><br>
-                        <a href="http://">LINK</a><br>
-                        <a href="http://">LINK</a><br>
-                    </div>
-                </div>
+                
                 <div class="bg-blue text-white padding30 text-center">
                     <div class="text-size-large">
                         <p>VIDEÓK</p>

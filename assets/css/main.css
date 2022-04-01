@@ -201,6 +201,16 @@ a:hover {
   color: #675fad;
 }
 
+.events__image-wrapper {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.events__image-wrapper a:hover {
+  text-decoration: underline !important;
+}
+
 .gallery {
   margin: 0 auto;
   width: 1000px;

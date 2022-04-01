@@ -81,3 +81,15 @@
         color: $text-purple;
     }
 }
+
+// Events section
+.events__image-wrapper {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    a:hover {
+        text-decoration: underline !important;
+    }
+    .events__event-list {
+    }
+}

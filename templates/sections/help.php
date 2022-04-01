@@ -1,4 +1,4 @@
-<div class="help__container">
+<div class="help__container mb-5">
     <div class="help__wrapper mw-hd m-auto">
         <h2 class="section-title text-uppercase text-center text-blue">Hogyan segíthetsz</h2>
         <ul class="help__list-group">
