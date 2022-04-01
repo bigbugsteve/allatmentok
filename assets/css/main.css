@@ -57,6 +57,10 @@ a:hover {
   color: #2d2e82;
 }
 
+.text-purple {
+  color: #2d2e82;
+}
+
 .text-size-small {
   font-size: 14px;
 }
@@ -89,10 +93,15 @@ a:hover {
   background-color: #292b33;
 }
 
-<<<<<<< HEAD
 .mw-hd {
   max-width: 1340px;
-=======
+}
+
+.section-title {
+  padding: 1.5rem;
+  text-align: center;
+}
+
 .cover {
   width: 100%;
 }
@@ -158,6 +167,40 @@ a:hover {
   margin-top: 5px;
 }
 
+.hero__container {
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.help__list-group li div:nth-child(1) {
+  font-size: 1.3rem;
+  color: #2d2e82;
+}
+
+.help__icon {
+  font-size: 2rem;
+}
+
+.help__icon .help__icon-wrapper {
+  border: 2px solid #675fad;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.help__icon i.bi {
+  color: #675fad;
+}
+
 .gallery {
   margin: 0 auto;
   width: 1000px;
@@ -169,5 +212,4 @@ a:hover {
 
 .picture img {
   width: 286px;
->>>>>>> adev
 }

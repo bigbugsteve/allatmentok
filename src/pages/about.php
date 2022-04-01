@@ -1,0 +1,1 @@
+<?php include('templates/sections/about.php') ?>

@@ -7,6 +7,9 @@
 .text-blue {
       color: $text-blue;
 }
+.text-purple {
+      color: $text-blue;
+}
 
 .text-size-small {
       font-size: 14px;
@@ -37,4 +40,9 @@
 
 .mw-hd {
       max-width: 1340px;
+}
+
+.section-title {
+      padding: 1.5rem;
+      text-align: center;
 }

@@ -1,5 +1,5 @@
 <div class="services__container bg-blue">
-    <ul class="list-group d-flex flex-row justify-content-around m-auto py-4 w-75 row">
+    <ul class="list-group d-flex flex-row justify-content-around m-auto py-4 w-75 row mw-hd">
         <li class="list-group-item my-1 rounded d-flex align-items-center bg-red py-1 px-2 border-0 col-2">
             <a href="" class="fs-11 text-white text-uppercase text-center">Online bejelentési lehetőség</a>
         </li>

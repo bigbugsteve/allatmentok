@@ -54,3 +54,30 @@
     display: inline-block;
     margin-top: 5px;
 }
+
+// Hero section
+.hero__container {
+    max-height: 700px;
+    overflow: hidden;
+}
+
+// Help section
+.help__list-group li div:nth-child(1) {
+    font-size: 1.3rem;
+    color: $text-blue;
+}
+.help__icon {
+    font-size: 2rem;
+    .help__icon-wrapper {
+        border: 2px solid $text-purple;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    i.bi {
+        color: $text-purple;
+    }
+}
