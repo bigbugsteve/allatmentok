@@ -1,8 +1,8 @@
 import ValidateFields from './validation.js';
 
-const contactName = document.getElementById("contactName");
+const contactName = document.getElementById("contactName"); // TODO deklarálni a fieldeket
 
-contactName.addEventListener("change", function(e){ValidateFields.validateName(e)})
+contactName.addEventListener("change", function(e){ValidateFields.validateName(e)}) // TODO hozzáadni az eventlistenert
 
 window.onload = function() {
 	var kuld = document.getElementById("kuld");

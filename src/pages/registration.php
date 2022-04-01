@@ -5,7 +5,7 @@
 		<div class="card-text">
 			<form action="?page=registration" method="POST">
 				<div class="form-group">
-					<label for="firstName">Vezetéknév</label>
+					<label for="firstName">Vezetéknév</label> // TODO -> registrationName
 					<input type="text" class="form-control form-control-sm" id="firstName">
 				</div>
 				<div class="form-group">

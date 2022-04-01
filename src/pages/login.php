@@ -5,7 +5,7 @@
 		<div class="card-text">
 			<form action="?page=loggedIn" method="post">
 				<div class="form-group">
-					<label for="email">Email</label>
+					<label for="email">Email</label> // TODO hivatkozások és nevek átnevezése -> loginName
 					<input type="email" name="email" class="form-control form-control-sm" id="email" aria-describedby="emailHelp">
 				</div>
 				<div class="form-group">
