@@ -35,3 +35,23 @@ closedir($reader);
     }
     ?>
 </div>
+
+<h2>V2:</h2>
+<div class="gallery">
+    <?php
+        arsort($images);
+        foreach ($images as $file => $date) {
+        ?>
+            <div class="picture">
+                <div class="card1">
+                <a href="<?php echo $GALLERY . $file ?>">
+                <img src="<?php echo $GALLERY . $file ?>" class="card1-image" alt="...">
+                
+                    <h5 class="card1-title">Név: <?php echo $file; ?></h5>
+                </a>
+                </div>
+            </div>
+    <?php
+    }
+    ?>
+</div>
