@@ -5,7 +5,7 @@
     $db_user = getenv('DB_USERNAME');
     $db_password = getenv('DB_PASSWORD');
 
-    $conn = new mysqli('localhost','mestervi_allatmentok','Allat2000','mestervi_allatmentok');
+    $conn = new mysqli($dbserver,$db,$db_password,$db_user);
     if (!$conn)
     {
         die("Sikertelen kapcsolodas a szerverhez!" . mysqli_connect_error());
