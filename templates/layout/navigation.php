@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white text-blue sticky-top">
-	<div class="container w-75 m-auto">
+	<div class="container m-auto">
 		<a class="navbar-brand" href="#">
 			<img src="assets/images/logo.png" alt="">
 		</a>

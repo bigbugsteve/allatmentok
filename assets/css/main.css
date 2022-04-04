@@ -7,6 +7,22 @@
   background-color: black;
 }
 
+.nav-item {
+  padding: .2rem 0.5rem;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.nav-item.active {
+  position: relative;
+  font-weight: bold;
+  background-color: #675fad;
+}
+
+.nav-item.active a {
+  color: #fff !important;
+}
+
 .page__container {
   min-height: 100vh;
   display: -webkit-box;
