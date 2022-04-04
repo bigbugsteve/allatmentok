@@ -1,8 +1,34 @@
 import ValidateFields from './validation.js';
 
+// Get input fields
 const contactName = document.getElementById("contactName"); // TODO deklarálni a fieldeket
+const contactEmail = document.getElementById("contactEmail");
+const contactMessage = document.getElementById("contactMessage");
+const contactNameErr = document.querySelector(".contactNameInvalid");
+// Forms 
+const contactForm = document.getElementById("contactForm");
 
-contactName.addEventListener("change", function(e){ValidateFields.validateName(e)}) // TODO hozzáadni az eventlistenert
+let contactNameValid = false;
+console.log(" 🚀 ~ file: main.js ~ line 12 ~ contactNameValid", contactNameValid)
+let contactEmailValid = true;
+let contactMessageValid = true;
+
+// Event listeners
+contactName.addEventListener("input", function(e){
+	const contactNameValid = ValidateFields.validateName(e);
+	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
+});
+contactName.addEventListener("blur", function(e){
+	if(contactNameValid === false) {
+		contactNameErr.classList.add("visible");
+	} else {
+		contactNameErr.classList.remove("visible");
+	}
+});
+
+// TODO hozzáadni az eventlistenert
+contactEmail.addEventListener("input", function(e){ValidateFields.validateEmail(e)}) // TODO hozzáadni az eventlistenert
+contactMessage.addEventListener("input", function(e){ValidateFields.validateMessage(e)}) // TODO hozzáadni az eventlistenert
 
 window.onload = function() {
 	var kuld = document.getElementById("kuld");
@@ -20,37 +46,37 @@ function ellenoriz() {
 	var rendben = true;
 	var fokusz = null;
 
-	var szoveg = document.getElementById("szoveg");
-	if (szoveg) {
-		if (szoveg.value.length==0) {
+	var contactMessage = document.getElementById("contactMessage");
+	if (contactMessage) {
+		if (contactMessage.value.length==0) {
 			rendben = false;
-			szoveg.style.background = '#f99';
-			fokusz = szoveg;
+			contactMessage.style.background = '#f99';
+			fokusz = contactMessage;
 		} else {
-			szoveg.style.background = '#9f9';
+			contactMessage.style.background = '#9f9';
 		}
 	}
 
-	var email = document.getElementById("email");
-	if (email) {
+	var contactEmail = document.getElementById("contactEmail");
+	if (contactEmail) {
 		var checkPattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; //online segítség: https://regex101.com/
 		if (!checkPattern.test(email.value)) {
 			rendben = false;
-			email.style.background = '#f99';
-			fokusz = email;
+			contactEmail.style.background = '#f99';
+			fokusz = contactEmail;
 		} else {
-			email.style.background = '#9f9';
+			contactEmail.style.background = '#9f9';
 		}
 	}
 
-	var nev = document.getElementById("nev");
-	if (nev) {
-		if (nev.value.length<5) {
+	var contactName = document.getElementById("contactName");
+	if (contactName) {
+		if (contactName.value.length<5) {
 			rendben = false;
-			nev.style.background = '#f99';
-			fokusz = nev;
+			contactName.style.background = '#f99';
+			fokusz = contactName;
 		} else {
-			nev.style.background = '#9f9';
+			contactName.style.background = '#9f9';
 		}
 	}
 

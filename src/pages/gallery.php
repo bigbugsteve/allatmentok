@@ -15,22 +15,21 @@ closedir($reader);
 <div class="bg-purple text-white text-center text-size-large">
     <h1 class="page-title">Galéria</p>
 </div>
+
 <div class="gallery">
     <?php
-    arsort($images);
-    foreach ($images as $file => $date) {
-    ?>
-        <div class="picture">
-            <div class="card" style="width: 18rem; margin: 10px;">
-                <img src="<?php echo $GALLERY . $file ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Név: <?php echo $file; ?></h5>
-                    <!-- <p class="card-text">Dátum:  <?php echo date($DATEFORM, $date); ?></p> -->
-                    <a href="<?php echo $GALLERY . $file ?>" class="btn btn-primary bg-purple w-100">Megnyitás</a>
+        arsort($images);
+        foreach ($images as $file => $date) {
+        ?>
+            <div class="picture">
+                <div class="card1">
+                <a href="<?php echo $GALLERY . $file ?>">
+                <img src="<?php echo $GALLERY . $file ?>" class="card1-image" alt="...">
+                
+                    <h5 class="card1-title">Név: <?php echo $file; ?></h5>
+                </a>
                 </div>
             </div>
-
-        </div>
     <?php
     }
     ?>

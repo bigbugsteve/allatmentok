@@ -2,7 +2,12 @@
 <?php if (file_exists('src/controller/' . $currentPage['file'] . '.php')) {
 	include("src/controller/{$currentPage['file']}.php");
     
-} else echo "ehhez nincs controller" ?>
+} else echo "ehhez nincs controller";
+echo $_SESSION['login']
+
+?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -33,6 +38,9 @@
 
         <div class="wrapper">
             <?php include("{$currentPage['file']}.php") ?>
+
+        <!-- UPLOAD ellenorzes -->
+
         </div>
         
         <?php include("templates/layout/footer.php"); ?>
