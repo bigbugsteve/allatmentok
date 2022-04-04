@@ -8,7 +8,7 @@
 				<div class="form-group">
 					<label for="contactName">Név</label>
 					<input class="form-control form-control-sm" type="text" id="contactName" name="contactName" size="20" maxlength="40">
-					<div class="contactNameInvalid">Minimum 3 karakter</div>
+					<div class="contactNameInvalid">Minimum 4 karakter</div>
 				</div>
 
 				<div class="form-group">
