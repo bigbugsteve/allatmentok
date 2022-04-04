@@ -15,13 +15,17 @@ let contactMessageValid = true;
 
 // Event listeners
 contactName.addEventListener("input", function(e){
-	const contactNameValid = ValidateFields.validateName(e);
+	contactNameValid = ValidateFields.validateName(e);
+	contactNameValid && contactNameErr.classList.remove("visible");
 	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
 });
+
 contactName.addEventListener("blur", function(e){
 	if(contactNameValid === false) {
+        console.log(" 🚀 IF ~ file: main.js ~ line 23 ~ contactName.addEventListener ~ contactNameValid", contactNameValid)
 		contactNameErr.classList.add("visible");
 	} else {
+        console.log(" 🚀 ELSE ~ file: main.js ~ line 23 ~ contactName.addEventListener ~ contactNameValid", contactNameValid)
 		contactNameErr.classList.remove("visible");
 	}
 });
