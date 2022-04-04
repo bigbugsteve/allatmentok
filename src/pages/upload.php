@@ -31,6 +31,12 @@
     }
 ?>
 
+<?php 
+if(!isset($_SESSION['login'])){
+    die(header("location: 404.php"));
+    }
+?>
+
 <div class="global-container">
 	<div class="card login-form bg-purple text-white">
         <div class="card-body">

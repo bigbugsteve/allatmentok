@@ -3,11 +3,7 @@
 	include("src/controller/{$currentPage['file']}.php");
     
 } else echo "ehhez nincs controller";
-echo $_SESSION['login']
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -23,13 +19,13 @@ echo $_SESSION['login']
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tetovált Állatmentők</title>
-</head>
-<style>
+    <style>
     body {
         position: relative;
         min-height: 100vh;
     }
-</style>
+    </style>
+</head>
 
 <body>
     <div class="page__container">
@@ -38,16 +34,11 @@ echo $_SESSION['login']
 
         <div class="wrapper">
             <?php include("{$currentPage['file']}.php") ?>
-
-        <!-- UPLOAD ellenorzes -->
-
         </div>
         
         <?php include("templates/layout/footer.php"); ?>
     </div>
     <script type="module" src="./assets/js/main.js"></script>
 </body>
-
-
 
 </html>
