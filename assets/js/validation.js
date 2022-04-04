@@ -9,7 +9,11 @@ export default class ValidateFields {
         }
       }
       static validateEmail(e) {
-        console.log("hello world", e.target.value)
+        if(e.target.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+          return true;
+        } else {
+          return false;
+        }
       }
       static validatePassword(e) {
         console.log("hello world", e.target.value)
