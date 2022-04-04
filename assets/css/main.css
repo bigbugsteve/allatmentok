@@ -7,6 +7,36 @@
   background-color: black;
 }
 
+.contactNameInvalid {
+  display: none;
+  background-color: #ae213d;
+  border-radius: 5px;
+  padding: .2rem .5rem;
+  margin: .5rem 0;
+  font-size: .8rem;
+  opacity: .8;
+}
+
+.contactNameInvalid.visible {
+  display: block;
+}
+
+.nav-item {
+  padding: .2rem 0.5rem;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.nav-item.active {
+  position: relative;
+  font-weight: bold;
+  background-color: #675fad;
+}
+
+.nav-item.active a {
+  color: #fff !important;
+}
+
 .page__container {
   min-height: 100vh;
   display: -webkit-box;

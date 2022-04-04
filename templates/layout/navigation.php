@@ -1,5 +1,6 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-white text-blue sticky-top">
-	<div class="container w-75 m-auto">
+	<div class="container m-auto">
 		<a class="navbar-brand" href="#">
 			<img src="assets/images/logo.png" alt="">
 		</a>
@@ -12,8 +13,8 @@
 			<ul class="navbar-nav m-auto">
 				<?php foreach ($pages as $url => $page) { ?>
 					<?php if (!isset($_SESSION['login']) && $page['menun'][0] || isset($_SESSION['login']) && $page['menun'][1]) { ?>
-						<!-- <li<?= (($page == $currentPage) ? ' class="active"' : '') ?>> -->
-						<li class="<?$page == $currentPage ? 'active nav-item mx-3 active' : 'nav-item mx-3 active' ?>">
+					
+						<li <?= (($page == $currentPage) ? 'class="active nav-item mx-3"' : ' class="nav-item mx-3" ') ?>>
 							<a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>" class="text-blue">
 								<?= $page['text'] ?></a>
 							</li>

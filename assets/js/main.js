@@ -1,8 +1,34 @@
 import ValidateFields from './validation.js';
 
+// Get input fields
 const contactName = document.getElementById("contactName"); // TODO deklarálni a fieldeket
+const contactEmail = document.getElementById("contactEmail");
+const contactMessage = document.getElementById("contactMessage");
+const contactNameErr = document.querySelector(".contactNameInvalid");
+// Forms 
+const contactForm = document.getElementById("contactForm");
 
-contactName.addEventListener("change", function(e){ValidateFields.validateName(e)}) // TODO hozzáadni az eventlistenert
+let contactNameValid = false;
+console.log(" 🚀 ~ file: main.js ~ line 12 ~ contactNameValid", contactNameValid)
+let contactEmailValid = true;
+let contactMessageValid = true;
+
+// Event listeners
+contactName.addEventListener("input", function(e){
+	const contactNameValid = ValidateFields.validateName(e);
+	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
+});
+contactName.addEventListener("blur", function(e){
+	if(contactNameValid === false) {
+		contactNameErr.classList.add("visible");
+	} else {
+		contactNameErr.classList.remove("visible");
+	}
+});
+
+// TODO hozzáadni az eventlistenert
+contactEmail.addEventListener("input", function(e){ValidateFields.validateEmail(e)}) // TODO hozzáadni az eventlistenert
+contactMessage.addEventListener("input", function(e){ValidateFields.validateMessage(e)}) // TODO hozzáadni az eventlistenert
 
 window.onload = function() {
 	var kuld = document.getElementById("kuld");
