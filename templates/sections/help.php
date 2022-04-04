@@ -28,7 +28,7 @@
                 <div class="col-xs-12 col-md-5 justify-content-center d-flex align-items-center">PayPal</div>
                 <div class="col-xs-12 col-md-2 justify-content-center d-flex align-items-center help__icon">
                     <div class="help__icon-wrapper">
-                    <i class="bi bi-paypal"></i>
+                    <img src="./assets/images/paypal.svg" width="20px">
                     </div>    
                 </div>
                 <div class="col-xs-12 col-md-5 justify-content-center d-flex align-items-center">Felajánlásaitokat az info@allatmentok.hu PayPal fiókra tudjátok elküldeni. </div>
