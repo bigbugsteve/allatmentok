@@ -14,7 +14,7 @@
 				<div class="form-group">
 					<label for="contactEmail">Email</label>
 					<input class="form-control form-control-sm" type="email" id="contactEmail" name="contactEmail" size="30" maxlength="40">
-					<div>Nem megfelelő</div>
+					<div class="contactEmailInvalid">Nem megfelelő formátum</div>
 				</div>
 
 				<div class="form-group">
