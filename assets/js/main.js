@@ -4,25 +4,40 @@ import ValidateFields from './validation.js';
 const contactName = document.getElementById("contactName"); // TODO deklarálni a fieldeket
 const contactEmail = document.getElementById("contactEmail");
 const contactMessage = document.getElementById("contactMessage");
+
 const contactNameErr = document.querySelector(".contactNameInvalid");
+const contactEmailErr = document.querySelector(".contactEmailInvalid");
 // Forms 
 const contactForm = document.getElementById("contactForm");
 
 let contactNameValid = false;
-console.log(" 🚀 ~ file: main.js ~ line 12 ~ contactNameValid", contactNameValid)
-let contactEmailValid = true;
+let contactEmailValid = false;
 let contactMessageValid = true;
 
 // Event listeners
 contactName.addEventListener("input", function(e){
-	const contactNameValid = ValidateFields.validateName(e);
+	contactNameValid = ValidateFields.validateName(e);
+	contactNameValid && contactNameErr.classList.remove("visible");
 	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
 });
+contactEmail.addEventListener("input", function(e){
+	contactEmailValid = ValidateFields.validateEmail(e);
+	contactEmailValid && contactEmailErr.classList.remove("visible");
+	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
+});
+
 contactName.addEventListener("blur", function(e){
 	if(contactNameValid === false) {
 		contactNameErr.classList.add("visible");
 	} else {
 		contactNameErr.classList.remove("visible");
+	}
+});
+contactEmail.addEventListener("blur", function(e){
+	if(contactEmailValid === false) {
+		contactEmailErr.classList.add("visible");
+	} else {
+		contactEmailErr.classList.remove("visible");
 	}
 });
 

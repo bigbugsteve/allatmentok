@@ -8,13 +8,13 @@
 				<div class="form-group">
 					<label for="contactName">Név</label>
 					<input class="form-control form-control-sm" type="text" id="contactName" name="contactName" size="20" maxlength="40">
-					<div class="contactNameInvalid">Minimum 3 karakter</div>
+					<div class="contactNameInvalid">Minimum 4 karakter</div>
 				</div>
 
 				<div class="form-group">
 					<label for="contactEmail">Email</label>
 					<input class="form-control form-control-sm" type="email" id="contactEmail" name="contactEmail" size="30" maxlength="40">
-					<div>Nem megfelelő</div>
+					<div class="contactEmailInvalid">Nem megfelelő formátum</div>
 				</div>
 
 				<div class="form-group">
