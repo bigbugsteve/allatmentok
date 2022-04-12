@@ -16,7 +16,6 @@ export default class ValidateFields {
         }
       }
       static validateMessage(e) {
-        console.log('kutyimutyi');
         if(e.target.value.length > 19) {
           return true;
         } else {
@@ -24,7 +23,11 @@ export default class ValidateFields {
         }
       }
       static validatePassword(e) {
-        console.log("hello world", e.target.value)
+        if(e.target.value.length < 6) {
+          return false
+        } else {
+          return true
+        }
       }
       static validateContactForm(name, email, msg) {
         if(name === true && email === true && msg === true)

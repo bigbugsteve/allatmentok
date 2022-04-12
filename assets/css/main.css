@@ -319,3 +319,17 @@ a:hover {
         grid-template-columns: repeat(4, 1fr);
   }
 }
+
+.loginEmailInvalid, .loginPasswordInvalid {
+  display: none;
+  background-color: #ae213d;
+  border-radius: 5px;
+  padding: .2rem .5rem;
+  margin: .5rem 0;
+  font-size: .8rem;
+  opacity: .8;
+}
+
+.loginEmailInvalid.visible, .loginPasswordInvalid.visible {
+  display: block;
+}

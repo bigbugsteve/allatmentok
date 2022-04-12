@@ -1,64 +1,67 @@
 import ValidateFields from './validation.js';
+import * as event from './events.js';
 
-// Get input fields
-const contactName = document.getElementById("contactName"); // TODO deklarálni a fieldeket
-const contactEmail = document.getElementById("contactEmail");
-const contactMessage = document.getElementById("contactMessage");
+// // Get input fields
+// const contactName = document.getElementById("contactName"); // TODO deklarálni a fieldeket
+// const contactEmail = document.getElementById("contactEmail");
+// const contactMessage = document.getElementById("contactMessage");
 
-const contactNameErr = document.querySelector(".contactNameInvalid");
-const contactEmailErr = document.querySelector(".contactEmailInvalid");
-const contactMsgErr = document.querySelector(".contactMessageInvalid");
-// Forms 
-const contactForm = document.getElementById("contactForm");
+// // Error fields
+// const contactNameErr = document.querySelector(".contactNameInvalid");
+// const contactEmailErr = document.querySelector(".contactEmailInvalid");
+// const contactMsgErr = document.querySelector(".contactMessageInvalid");
 
-let contactNameValid = false;
-let contactEmailValid = false;
-let contactMessageValid = false;
+// // Forms 
+// const contactForm = document.getElementById("contactForm");
 
-// Event listeners
-contactName.addEventListener("input", function(e){
-	contactNameValid = ValidateFields.validateName(e);
-	contactNameValid && contactNameErr.classList.remove("visible");
-	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
-});
-contactEmail.addEventListener("input", function(e){
-	contactEmailValid = ValidateFields.validateEmail(e);
-	contactEmailValid && contactEmailErr.classList.remove("visible");
-	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
-});
-contactMessage.addEventListener("input", function(e){
-	contactMessageValid = ValidateFields.validateMessage(e);
-    console.log(" 🚀 ~ file: main.js ~ line 31 ~ contactMessage.addEventListener ~ contactMessageValid", contactMessageValid)
-	contactMessageValid && contactMsgErr.classList.remove("visible");
-	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
-});
+// let contactNameValid = false;
+// let contactEmailValid = false;
+// let contactMessageValid = false;
 
-contactName.addEventListener("blur", function(e){
-	if(contactNameValid === false) {
-		contactNameErr.classList.add("visible");
-	} else {
-		contactNameErr.classList.remove("visible");
-	}
-});
-contactEmail.addEventListener("blur", function(e){
-	if(contactEmailValid === false) {
-		contactEmailErr.classList.add("visible");
-	} else {
-		contactEmailErr.classList.remove("visible");
-	}
-});
-contactMessage.addEventListener("blur", function(e){
-	if(contactMessageValid === false) {
-		contactMsgErr.classList.add("visible");
-	} else {
-		contactMsgErr.classList.remove("visible");
-	}
-});
+// // Event listeners
+// contactName.addEventListener("input", function(e){
+// 	contactNameValid = ValidateFields.validateName(e);
+// 	contactNameValid && contactNameErr.classList.remove("visible");
+// 	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
+// });
+// contactEmail.addEventListener("input", function(e){
+// 	contactEmailValid = ValidateFields.validateEmail(e);
+// 	contactEmailValid && contactEmailErr.classList.remove("visible");
+// 	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
+// });
+// contactMessage.addEventListener("input", function(e){
+// 	contactMessageValid = ValidateFields.validateMessage(e);
+// 	contactMessageValid && contactMsgErr.classList.remove("visible");
+// 	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
+// });
+
+// contactName.addEventListener("blur", function(e){
+// 	if(contactNameValid === false) {
+// 		contactNameErr.classList.add("visible");
+// 	} else {
+// 		contactNameErr.classList.remove("visible");
+// 	}
+// });
+// contactEmail.addEventListener("blur", function(e){
+// 	if(contactEmailValid === false) {
+// 		contactEmailErr.classList.add("visible");
+// 	} else {
+// 		contactEmailErr.classList.remove("visible");
+// 	}
+// });
+// contactMessage.addEventListener("blur", function(e){
+// 	if(contactMessageValid === false) {
+// 		contactMsgErr.classList.add("visible");
+// 	} else {
+// 		contactMsgErr.classList.remove("visible");
+// 	}
+// });
 
 // TODO hozzáadni az eventlistenert
-contactEmail.addEventListener("input", function(e){ValidateFields.validateEmail(e)}) // TODO hozzáadni az eventlistenert
-contactMessage.addEventListener("input", function(e){ValidateFields.validateMessage(e)}) // TODO hozzáadni az eventlistenert
+// contactEmail.addEventListener("input", function(e){ValidateFields.validateEmail(e)}) // TODO hozzáadni az eventlistenert
+// contactMessage.addEventListener("input", function(e){ValidateFields.validateMessage(e)}) // TODO hozzáadni az eventlistenert
 
+// console.log('hello contactMsgErr', contactMsgErr);
 window.onload = function() {
 	var kuld = document.getElementById("kuld");
 	if (kuld) {
