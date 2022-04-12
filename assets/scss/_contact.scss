@@ -1,4 +1,4 @@
-.contactNameInvalid, .contactEmailInvalid {
+.contactNameInvalid, .contactEmailInvalid, .contactMessageInvalid {
     display: none;
     background-color: $bg-red;
     border-radius: 5px;
@@ -9,4 +9,4 @@
     &.visible {
         display: block;
     }
-}
+} 

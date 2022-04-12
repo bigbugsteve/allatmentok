@@ -7,12 +7,13 @@ const contactMessage = document.getElementById("contactMessage");
 
 const contactNameErr = document.querySelector(".contactNameInvalid");
 const contactEmailErr = document.querySelector(".contactEmailInvalid");
+const contactMsgErr = document.querySelector(".contactMessageInvalid");
 // Forms 
 const contactForm = document.getElementById("contactForm");
 
 let contactNameValid = false;
 let contactEmailValid = false;
-let contactMessageValid = true;
+let contactMessageValid = false;
 
 // Event listeners
 contactName.addEventListener("input", function(e){
@@ -23,6 +24,12 @@ contactName.addEventListener("input", function(e){
 contactEmail.addEventListener("input", function(e){
 	contactEmailValid = ValidateFields.validateEmail(e);
 	contactEmailValid && contactEmailErr.classList.remove("visible");
+	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
+});
+contactMessage.addEventListener("input", function(e){
+	contactMessageValid = ValidateFields.validateMessage(e);
+    console.log(" 🚀 ~ file: main.js ~ line 31 ~ contactMessage.addEventListener ~ contactMessageValid", contactMessageValid)
+	contactMessageValid && contactMsgErr.classList.remove("visible");
 	ValidateFields.validateContactForm(contactNameValid, contactEmailValid, contactMessageValid);
 });
 
@@ -40,6 +47,13 @@ contactEmail.addEventListener("blur", function(e){
 		contactEmailErr.classList.remove("visible");
 	}
 });
+contactMessage.addEventListener("blur", function(e){
+	if(contactMessageValid === false) {
+		contactMsgErr.classList.add("visible");
+	} else {
+		contactMsgErr.classList.remove("visible");
+	}
+});
 
 // TODO hozzáadni az eventlistenert
 contactEmail.addEventListener("input", function(e){ValidateFields.validateEmail(e)}) // TODO hozzáadni az eventlistenert
@@ -52,57 +66,57 @@ window.onload = function() {
 	}
 };
 
-const fetchApi = async () => {
-	console.log('Helloo')
-	const res = await fetch('http://localhost/allatmentok/contact_all.php').then(res => res.json()).then(res => console.log(res))
-}
+// const fetchApi = async () => {
+// 	console.log('Helloo')
+// 	const res = await fetch('http://localhost/allatmentok/contact_all.php').then(res => res.json()).then(res => console.log(res))
+// }
 
-function ellenoriz() {
-	var rendben = true;
-	var fokusz = null;
+// function ellenoriz() {
+// 	var rendben = true;
+// 	var fokusz = null;
 
-	var contactMessage = document.getElementById("contactMessage");
-	if (contactMessage) {
-		if (contactMessage.value.length==0) {
-			rendben = false;
-			contactMessage.style.background = '#f99';
-			fokusz = contactMessage;
-		} else {
-			contactMessage.style.background = '#9f9';
-		}
-	}
+// 	var contactMessage = document.getElementById("contactMessage");
+// 	if (contactMessage) {
+// 		if (contactMessage.value.length==0) {
+// 			rendben = false;
+// 			contactMessage.style.background = '#f99';
+// 			fokusz = contactMessage;
+// 		} else {
+// 			contactMessage.style.background = '#9f9';
+// 		}
+// 	}
 
-	var contactEmail = document.getElementById("contactEmail");
-	if (contactEmail) {
-		var checkPattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; //online segítség: https://regex101.com/
-		if (!checkPattern.test(email.value)) {
-			rendben = false;
-			contactEmail.style.background = '#f99';
-			fokusz = contactEmail;
-		} else {
-			contactEmail.style.background = '#9f9';
-		}
-	}
+// 	var contactEmail = document.getElementById("contactEmail");
+// 	if (contactEmail) {
+// 		var checkPattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; //online segítség: https://regex101.com/
+// 		if (!checkPattern.test(email.value)) {
+// 			rendben = false;
+// 			contactEmail.style.background = '#f99';
+// 			fokusz = contactEmail;
+// 		} else {
+// 			contactEmail.style.background = '#9f9';
+// 		}
+// 	}
 
-	var contactName = document.getElementById("contactName");
-	if (contactName) {
-		if (contactName.value.length<5) {
-			rendben = false;
-			contactName.style.background = '#f99';
-			fokusz = contactName;
-		} else {
-			contactName.style.background = '#9f9';
-		}
-	}
+// 	var contactName = document.getElementById("contactName");
+// 	if (contactName) {
+// 		if (contactName.value.length<5) {
+// 			rendben = false;
+// 			contactName.style.background = '#f99';
+// 			fokusz = contactName;
+// 		} else {
+// 			contactName.style.background = '#9f9';
+// 		}
+// 	}
 
-	if (fokusz) {
-		fokusz.focus();
-	}
+// 	if (fokusz) {
+// 		fokusz.focus();
+// 	}
 
-	var kuld = document.getElementById("kuld");
-	if (kuld) {
-		kuld.disabled = !rendben;
-	}
+// 	var kuld = document.getElementById("kuld");
+// 	if (kuld) {
+// 		kuld.disabled = !rendben;
+// 	}
 
-	return rendben;
-}
+// 	return rendben;
+// }

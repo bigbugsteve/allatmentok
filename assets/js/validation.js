@@ -1,7 +1,7 @@
 // TODO validációk
 export default class ValidateFields {
       static validateName(e) {
-        console.log("hello validate name", e.target.value)
+        // console.log("hello validate name", e.target.value)
         if(e.target.value.length > 3) {
           return true;
         } else {
@@ -15,10 +15,15 @@ export default class ValidateFields {
           return false;
         }
       }
-      static validatePassword(e) {
-        console.log("hello world", e.target.value)
-      }
       static validateMessage(e) {
+        console.log('kutyimutyi');
+        if(e.target.value.length > 19) {
+          return true;
+        } else {
+          return false
+        }
+      }
+      static validatePassword(e) {
         console.log("hello world", e.target.value)
       }
       static validateContactForm(name, email, msg) {
