@@ -243,19 +243,25 @@ a:hover {
 
 .gallery {
   margin: 0 auto;
-  width: 1000px;
+  max-width: 1200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1.5rem;
+  padding: 1rem;
+  justify-items: center;
 }
 
-.picture {
-  display: inline-block;
+.image__wrapper {
+  width: 240px;
 }
 
-.picture img {
+.image__wrapper img {
   width: 286px;
 }
 
-.card1 {
-  width: 240px;
+.image__card {
   height: 300px;
   border-radius: 10px;
   outline: 1px solid white;
@@ -266,7 +272,7 @@ a:hover {
   overflow: hidden;
 }
 
-.card1-image {
+.card-image {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -279,16 +285,37 @@ a:hover {
   transition: transform .75s, -webkit-transform .75s;
 }
 
-.card1:hover .card1-image {
+.image__card:hover .card-image {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.card1-title {
+.image__card-title {
   position: absolute;
   left: 15px;
   bottom: 15px;
   font-size: 15px;
   color: azure;
   text-shadow: 0 0 1px black;
+}
+
+@media (min-width: 576px) {
+  .gallery {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .gallery {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
 }

@@ -23,6 +23,7 @@ $pages = array(
       '/' => array('file' => 'home', 'text' => 'Főoldal', 'menun' => array(1, 1)),
       'about' => array('file' => 'about', 'text' => 'Rólunk', 'menun' => array(1, 1)),
       'contact' => array('file' => 'contact', 'text' => 'Kapcsolat', 'menun' => array(1, 1)),
+      'messageSent' => array('file' => 'messageSent', 'text' => '', 'menun' => array(0, 0)),
       'contact_all' => array('file' => 'contact_all', 'text' => 'Üzenetek', 'menun' => array(1, 1)),
       'gallery' => array('file' => 'gallery', 'text' => 'Galéria', 'menun' => array(1, 1)),
       'upload' => array('file' => 'upload', 'text' => 'Feltöltés', 'menun' => array(0, 1)),

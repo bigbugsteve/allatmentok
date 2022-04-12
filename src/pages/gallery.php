@@ -18,18 +18,18 @@ closedir($reader);
 
 <div class="gallery">
     <?php
-        arsort($images);
-        foreach ($images as $file => $date) {
-        ?>
-            <div class="picture">
-                <div class="card1">
+    arsort($images);
+    foreach ($images as $file => $date) {
+    ?>
+        <div class="image__wrapper">
+            <div class="image__card">
                 <a href="<?php echo $GALLERY . $file ?>">
-                <img src="<?php echo $GALLERY . $file ?>" class="card1-image" alt="...">
-                
-                    <h5 class="card1-title">Név: <?php echo $file; ?></h5>
+                    <img src="<?php echo $GALLERY . $file ?>" class="card-image" alt="...">
+
+                    <h5 class="image__card-title">Név: <?php echo $file; ?></h5>
                 </a>
-                </div>
             </div>
+        </div>
     <?php
     }
     ?>

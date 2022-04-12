@@ -23,23 +23,21 @@
         echo "
         <table class='table'>
         <tr>
-             <th>Név</th>
-             <th>E-mail</th>
-             <th>Üzenet</th>
-             <th>Dátum</th>
-         </tr>";
+            <th>Név</th>
+            <th>E-mail</th>
+            <th>Üzenet</th>
+            <th>Dátum</th>
+        </tr>";
 
-         while ($row = mysqli_fetch_array($query))
-         {
-             echo "<tr>
-             <td>$row[name]</td>
-             <td>$row[email]</td>
-             <td>$row[message]</td>
-             <td>$row[date]</td>
-             </tr>";
-         }
-         echo "</table>";
+        while ($row = mysqli_fetch_array($query))
+        {
+            echo "<tr>
+            <td>$row[name]</td>
+            <td>$row[email]</td>
+            <td>$row[message]</td>
+            <td>$row[date]</td>
+            </tr>";
+        }
+        echo "</table>";
     // $res = $query;
     mysqli_close($conn);
-
-?>
