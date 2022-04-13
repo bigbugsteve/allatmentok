@@ -27,6 +27,7 @@
             <th>E-mail</th>
             <th>Üzenet</th>
             <th>Dátum</th>
+            <th>Szerző</th>
         </tr>";
 
         while ($row = mysqli_fetch_array($query))
@@ -36,6 +37,7 @@
             <td>$row[email]</td>
             <td>$row[message]</td>
             <td>$row[date]</td>
+            <td>$row[anonym]</td>
             </tr>";
         }
         echo "</table>";

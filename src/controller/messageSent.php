@@ -1,6 +1,6 @@
 
 <?php
-	// szerver oldali ellenőrzés példa
+	// szerver oldali ellenőrzés
 	$dbserver = getenv('DB_HOST_LOCAL');
 	$db = getenv('DB_DATABASE');
 	$db_user = getenv('DB_USERNAME');
@@ -22,16 +22,22 @@
 		exit("Hibás szöveg: ".$_POST['contactMessage']);
 	}
 
-	echo "Kapott értékek: ";
-	echo "<pre>";
-	var_dump($_POST);
-	echo "</pre>";
+	// echo "Kapott értékek: ";
+	// echo "<pre>";
+	// var_dump($_POST);
+	// echo "</pre>";
 
 	$name = $_POST["contactName"];
 	$email = $_POST["contactEmail"];
 	$message = $_POST["contactMessage"];
-	$anonym = 0;
-	$date = time();
+
+	if(!isset($_SESSION['login'])){
+			$anonym = "Vendég";
+		} else {
+			$anonym = "Felhasználó";
+		}
+
+	$date = date('Y-m-d H:i');
 
 
 	// Adatbazis kapcsolodas / mentes
@@ -45,8 +51,9 @@
 	$rs = mysqli_query($conn, $sql);
 	if($rs)
 	{
-		echo "Az adatok mentve az adatbazisba! ";
-		echo $date;
+		// echo "Az adatok mentve az adatbazisba! ";
+		// echo $date;
+		header( 'Location: ?page=contact_all' );
 	}
 	mysqli_close($conn);
 
