@@ -4,15 +4,6 @@
     
 } else echo "";
 
-if(isset($_SESSION['login'])){
-    echo "Bejelentkezve: ";
-    echo $_SESSION['csn'];
-    echo " ";
-    echo $_SESSION['un'];
-    echo " (";
-    echo $_SESSION['login'];
-    echo ")";
-    }
 ?>
 <!DOCTYPE html>
 <html>

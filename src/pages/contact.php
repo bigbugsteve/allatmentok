@@ -1,3 +1,7 @@
+<div class="bg-purple text-white text-center text-size-large p-0 m-0 mb-2">
+    <h1 class="page-title">Kapcsolat</h1>
+</div>
+
 <div class="global-container">
 	<div class="card login-form bg-purple text-white">
 		<div class="card-body">

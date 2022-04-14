@@ -1,5 +1,7 @@
+<div class="bg-purple text-white text-center text-size-large p-0 m-0 mb-2">
+    <h1 class="page-title">Üzenetek</h1>
+</div>
 <?php
-
     $dbserver = getenv('DB_HOST_LOCAL');
     $db = getenv('DB_DATABASE');
     $db_user = getenv('DB_USERNAME');
@@ -21,14 +23,17 @@
     // $res = mysqli_fetch_array($query);
     // echo json_encode($res);
         echo "
-        <table class='table'>
+        <table class='table table-striped mt-5 px-5'>
+        <thead>
         <tr>
             <th>Név</th>
             <th>E-mail</th>
             <th>Üzenet</th>
             <th>Dátum</th>
             <th>Szerző</th>
-        </tr>";
+        </tr>
+        </thead>";
+
 
         while ($row = mysqli_fetch_array($query))
         {

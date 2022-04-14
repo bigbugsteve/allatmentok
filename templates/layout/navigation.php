@@ -1,4 +1,21 @@
 
+<div <?= ((isset($_SESSION['login'])) ? 'class="navbar__toolbar text-right text-white bg-purple p-1"' : ' class="d-none" ') ?>>
+	<div class="container">
+		<div class="navbar__toolbar_wrapper mx-3">
+			<?php 
+				if(isset($_SESSION['login'])){
+					echo "Bejelentkezve: ";
+					echo $_SESSION['csn'];
+					echo " ";
+					echo $_SESSION['un'];
+					echo " (";
+					echo $_SESSION['login'];
+					echo ")";
+				}
+			?>
+		</div>
+	</div>
+</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-white text-blue sticky-top">
 	<div class="container m-auto">
 		<a class="navbar-brand" href="https://www.allatmentok.hu/" target="_blank">
@@ -20,7 +37,7 @@
 							</li>
 					<?php } ?>
 				<?php } ?>
-				<li class="nav-item mx-3"><a href="https://www.allatmentok.hu/" class="nav-item text-blue">www.allatmentok.hu</a></li>
+				<!-- <li class="nav-item mx-3"><a href="https://www.allatmentok.hu/" class="nav-item text-blue">www.allatmentok.hu</a></li> -->
 			</ul>
 		</div>
 	</div>

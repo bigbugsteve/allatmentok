@@ -12,8 +12,8 @@ while (($file = readdir($reader)) !== false)
 closedir($reader);
 ?>
 
-<div class="bg-purple text-white text-center text-size-large">
-    <h1 class="page-title">Galéria</p>
+<div class="bg-purple text-white text-center text-size-large p-0 m-0 mb-2">
+    <h1 class="page-title">Galéria</h1>
 </div>
 
 <div class="gallery">

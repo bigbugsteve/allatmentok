@@ -33,9 +33,13 @@
 
 <?php 
 if(!isset($_SESSION['login'])){
-    die(header("location: 404.php"));
+    die(header("location: ?page=404.php"));
     }
 ?>
+
+<div class="bg-purple text-white text-center text-size-large p-0 m-0 mb-2">
+    <h1 class="page-title">Galéria</h1>
+</div>
 
 <div class="global-container">
 	<div class="card login-form bg-purple text-white">
