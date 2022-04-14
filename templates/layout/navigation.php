@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white text-blue sticky-top">
 	<div class="container m-auto">
-		<a class="navbar-brand" href="#">
+		<a class="navbar-brand" href="https://www.allatmentok.hu/" target="_blank">
 			<img src="assets/images/logo.png" alt="">
 		</a>
 		<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
 							</li>
 					<?php } ?>
 				<?php } ?>
-				<li><a href="https://www.allatmentok.hu/" class="nav-item text-blue">www.allatmentok.hu</a></li>
+				<li class="nav-item mx-3"><a href="https://www.allatmentok.hu/" class="nav-item text-blue">www.allatmentok.hu</a></li>
 			</ul>
 		</div>
 	</div>
