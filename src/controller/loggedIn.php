@@ -13,7 +13,7 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
         
         // Felhasználó keresése
         $sqlSelect = "select id, firstName, lastName, gender, email from user where email = :email and password = :password;";
-		echo $sqlSelect;
+		// echo $sqlSelect;
         $sth = $dbh->prepare($sqlSelect);
         $sth->execute(array(':email' => $_POST['email'], ':password' => $_POST['password']));
         $row = $sth->fetch(PDO::FETCH_ASSOC);
@@ -21,7 +21,7 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
             $_SESSION['csn'] = $row['firstName']; $_SESSION['un'] = $row['lastName']; $_SESSION['login'] = $_POST['email'];
         }
 
-		echo $_SESSION;
+		// echo $_SESSION;
     }
     catch (PDOException $e) {
         echo $e;
