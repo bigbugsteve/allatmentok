@@ -3,7 +3,7 @@
 		<div class="card-body">
 			<h3 class="card-title text-center">Regisztráció</h3>
 			<div class="card-text">
-				<form action="?page=registration" method="POST">
+				<form action="?page=regSuccess" method="POST">
 					<div class="form-group">
 						<label for="firstName">Vezetéknév</label>
 						<input type="text" class="form-control form-control-sm" id="firstName">
