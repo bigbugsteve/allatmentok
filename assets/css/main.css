@@ -7,20 +7,6 @@
   background-color: black;
 }
 
-.contactNameInvalid, .contactEmailInvalid, .contactMessageInvalid {
-  display: none;
-  background-color: #ae213d;
-  border-radius: 5px;
-  padding: .2rem .5rem;
-  margin: .5rem 0;
-  font-size: .8rem;
-  opacity: .8;
-}
-
-.contactNameInvalid.visible, .contactEmailInvalid.visible, .contactMessageInvalid.visible {
-  display: block;
-}
-
 .nav-item {
   padding: .2rem 0.5rem;
   border-radius: 5px;
@@ -320,7 +306,15 @@ a:hover {
   }
 }
 
-.loginEmailInvalid, .loginPasswordInvalid {
+.loginEmailInvalid,
+.loginPasswordInvalid,
+.contactNameInvalid,
+.contactEmailInvalid,
+.contactMessageInvalid,
+.firstNameInvalid,
+.lastNameInvalid,
+.registrationEmailInvalid,
+.registrationPasswordInvalid {
   display: none;
   background-color: #ae213d;
   border-radius: 5px;
@@ -330,6 +324,14 @@ a:hover {
   opacity: .8;
 }
 
-.loginEmailInvalid.visible, .loginPasswordInvalid.visible {
+.loginEmailInvalid.visible,
+.loginPasswordInvalid.visible,
+.contactNameInvalid.visible,
+.contactEmailInvalid.visible,
+.contactMessageInvalid.visible,
+.firstNameInvalid.visible,
+.lastNameInvalid.visible,
+.registrationEmailInvalid.visible,
+.registrationPasswordInvalid.visible {
   display: block;
 }

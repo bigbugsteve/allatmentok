@@ -2,7 +2,7 @@
 export default class ValidateFields {
       static validateName(e) {
         // console.log("hello validate name", e.target.value)
-        if(e.target.value.length > 3) {
+        if(e.target.value.length > 2) {
           return true;
         } else {
           return false

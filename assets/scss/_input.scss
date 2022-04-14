@@ -1,0 +1,21 @@
+.loginEmailInvalid,
+.loginPasswordInvalid,
+.contactNameInvalid,
+.contactEmailInvalid,
+.contactMessageInvalid,
+.firstNameInvalid,
+.lastNameInvalid,
+.registrationEmailInvalid,
+.registrationPasswordInvalid
+ {
+    display: none;
+    background-color: $bg-red;
+    border-radius: 5px;
+    padding: .2rem .5rem;
+    margin: .5rem 0;
+    font-size: .8rem;
+    opacity: .8;
+    &.visible {
+        display: block;
+    }
+}
