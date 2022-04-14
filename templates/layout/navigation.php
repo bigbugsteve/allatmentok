@@ -20,6 +20,7 @@
 							</li>
 					<?php } ?>
 				<?php } ?>
+				<li><a href="https://www.allatmentok.hu/" class="nav-item text-blue">www.allatmentok.hu</a></li>
 			</ul>
 		</div>
 	</div>

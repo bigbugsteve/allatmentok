@@ -31,7 +31,7 @@ $pages = array(
       'loggedIn' => array('file' => 'loggedIn', 'text' => '', 'menun' => array(1, 0)),
       'logout' => array('file' => 'logout', 'text' => 'Kilépés', 'menun' => array(0, 1)),
       'registration' => array('file' => 'registration', 'text' => 'Regisztráció', 'menun' => array(0, 0)),
-      'regSuccess' => array('file' => 'regSuccess', 'text' => '', 'menun' => array(0, 0))
+      'regSuccess' => array('file' => 'regSuccess', 'text' => '', 'menun' => array(0, 0)),
 );
 
 $hiba_oldal = array('file' => '404', 'text' => 'A keresett oldal nem található!');
