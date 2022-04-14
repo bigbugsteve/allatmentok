@@ -1,69 +1,92 @@
 import {ContactVars, LoginVars} from "./variables.js";
 import ValidateFields from './validation.js';
 
+console.log("ContactVars.contactName", ContactVars.contactName)
 // ====== Event listeners ====== 
     // CONTACT
-    const contactNameEvent = ContactVars.contactName?.addEventListener("input", (e) => {
-        ContactVars.contactNameValid = ValidateFields.validateName(e);
-        ContactVars.contactNameValid && ContactVars.contactNameErr.classList.remove("visible");
-        ValidateFields.validateContactForm(ContactVars.contactNameValid, ContactVars.contactEmailValid, ContactVars.contactMessageValid);
+    const contactFormValidation = () => {
+        const isFormValid = ValidateFields.validateForm(ContactVars.nameValid, ContactVars.emailValid, ContactVars.messageValid)
+        if(isFormValid === true) {
+            ContactVars.sendBtn.disabled = false
+        } else {
+            ContactVars.sendBtn.disabled = true
+        }   
+    }
+    const contactNameEvent = ContactVars.name?.addEventListener("input", (e) => {
+        ContactVars.nameValid = ValidateFields.validateName(e);
+        ContactVars.nameValid && ContactVars.nameErr.classList.remove("visible");
+        const formValid = ValidateFields.validateContactForm(ContactVars.nameValid, ContactVars.contactEmailValid, ContactVars.contactMessageValid);
+        contactFormValidation();
     });
-    const contactEmailEvent = ContactVars.contactEmail?.addEventListener("input", (e) => {
-        ContactVars.contactEmailValid = ValidateFields.validateEmail(e);
-        ContactVars.contactEmailValid && ContactVars.contactEmailErr.classList.remove("visible");
-        ValidateFields.validateContactForm(ContactVars.contactNameValid, ContactVars.contactEmailValid, ContactVars.contactMessageValid);
+    const contactEmailEvent = ContactVars.email?.addEventListener("input", (e) => {
+        ContactVars.emailValid = ValidateFields.validateEmail(e);
+        ContactVars.emailValid && ContactVars.emailErr.classList.remove("visible");
+        ValidateFields.validateContactForm(ContactVars.nameValid, ContactVars.emailValid, ContactVars.messageValid);
+        contactFormValidation();
     });
-    const contactMessageEvent = ContactVars.contactMessage?.addEventListener("input", (e) => {
-        ContactVars.contactMessageValid = ValidateFields.validateMessage(e);
-        ContactVars.contactMessageValid && ContactVars.contactMsgErr.classList.remove("visible");
-        ValidateFields.validateContactForm(ContactVars.contactNameValid, ContactVars.contactEmailValid, ContactVars.contactMessageValid);
+    const contactMessageEvent = ContactVars.message?.addEventListener("input", (e) => {
+        ContactVars.messageValid = ValidateFields.validateMessage(e);
+        ContactVars.messageValid && ContactVars.messageErr.classList.remove("visible");
+        ValidateFields.validateContactForm(ContactVars.nameValid, ContactVars.emailValid, ContactVars.messageValid);
+        contactFormValidation();
     });
+
     // LOGIN
-    const loginEmailEvent = LoginVars.loginEmail?.addEventListener("input", (e) => {
-        LoginVars.loginEmailValid = ValidateFields.validateEmail(e);
-        LoginVars.loginEmailValid && LoginVars.loginEmailErr.classList.remove("visible");
+    const loginFormValidation = () => {
+        const isFormValid = ValidateFields.validateForm(LoginVars.emailValid, LoginVars.passwordValid)
+        if(isFormValid === true) {
+            LoginVars.loginBtn.disabled = false
+        } else {
+            LoginVars.loginBtn.disabled = true
+        }   
+    }
+    const loginEmailEvent = LoginVars.email?.addEventListener("input", (e) => {
+        LoginVars.emailValid = ValidateFields.validateEmail(e);
+        LoginVars.emailValid && LoginVars.emailErr.classList.remove("visible");
+        loginFormValidation()
         // ValidateFields.validateContactForm(LoginVars.loginEmailValid, LoginVars.LoginPasswordageValid);
     })
-    const loginPasswordEvent = LoginVars.loginPassword?.addEventListener("input", (e) => {
-        LoginVars.loginPasswordValid = ValidateFields.validatePassword(e);
-        LoginVars.loginPasswordValid && LoginVars.loginPasswordErr.classList.remove("visible");
+    const loginPasswordEvent = LoginVars.password?.addEventListener("input", (e) => {
+        LoginVars.passwordValid = ValidateFields.validatePassword(e);
+        LoginVars.passwordValid && LoginVars.passwordErr.classList.remove("visible");
+        loginFormValidation()
         // ValidateFields.validateContactForm(LoginVars.loginEmailValid, LoginVars.LoginPasswordageValid);
     })
 
 
 // ====== BLUR Events ======
-ContactVars.contactName?.addEventListener("blur", (e) => {
-	if(ContactVars.contactNameValid === false) {
-		ContactVars.contactNameErr.classList.add("visible");
+ContactVars.name?.addEventListener("blur", (e) => {
+	if(ContactVars.nameValid === false) {
+		ContactVars.nameErr.classList.add("visible");
 	} else {
-		ContactVars.contactNameErr.classList.remove("visible");
+		ContactVars.nameErr.classList.remove("visible");
 	}
 });
-ContactVars.contactEmail?.addEventListener("blur", (e) => {
-	if(ContactVars.contactEmailValid === false) {
-		ContactVars.contactEmailErr.classList.add("visible");
+ContactVars.email?.addEventListener("blur", (e) => {
+	if(ContactVars.emailValid === false) {
+		ContactVars.emailErr.classList.add("visible");
 	} else {
-		ContactVars.contactEmailErr.classList.remove("visible");
+		ContactVars.emailErr.classList.remove("visible");
 	}
 });
-ContactVars.contactMessage?.addEventListener("blur", (e) => {
-    if(ContactVars.contactMessageValid === false) {
-        ContactVars.contactMsgErr.classList.add("visible");
+ContactVars.message?.addEventListener("blur", (e) => {
+    if(ContactVars.messageValid === false) {
+        ContactVars.messageErr.classList.add("visible");
 	} else {
-        ContactVars.contactMsgErr.classList.remove("visible");
+        ContactVars.messageErr.classList.remove("visible");
 	}
 });
-LoginVars.loginEmail?.addEventListener("blur", (e) => {
-    if(LoginVars.loginEmailValid === false) {
-        LoginVars.loginEmailErr.classList.add("visible");
+LoginVars.email?.addEventListener("blur", (e) => {
+    if(LoginVars.emailValid === false) {
+        LoginVars.emailErr.classList.add("visible");
     } else {
-        LoginVars.loginEmailErr.classList.remove("visible");
+        LoginVars.emailErr.classList.remove("visible");
     }
 });
-LoginVars.loginPassword?.addEventListener("blur", (e) => {
-    if(LoginVars.loginPasswordValid === false) {
-        LoginVars.loginPasswordErr.classList.add("visible");
+LoginVars.password?.addEventListener("blur", (e) => {
+    if(LoginVars.passwordValid === false) {
+        LoginVars.passwordErr.classList.add("visible");
     } else {
-        LoginVars.loginPasswordErr.classList.remove("visible");
+        LoginVars.passwordErr.classList.remove("visible");
     }
 });

@@ -29,9 +29,11 @@ export default class ValidateFields {
           return true
         }
       }
-      static validateContactForm(name, email, msg) {
-        if(name === true && email === true && msg === true)
-        document.getElementById("contactSendBtn").disabled = false;
-          // sendBtn.ariaDisabled = false;
+      static validateForm(...fields) {
+        if(fields.includes(false)) {
+          return false;
+        } else {
+          return true
+        }
       }
 }

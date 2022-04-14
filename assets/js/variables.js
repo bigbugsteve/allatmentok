@@ -1,51 +1,71 @@
 export class ContactVars {
-    constructor(contactName, contactEmail, contactMessage, contactNameErr, contactEmailErr, contactMsgErr, contactNameValid, contactEmailValid, contactMessageValid) {
-        // Get input fields
-        this.contactName = contactName
-        this.contactEmail = contactEmail
-        this.contactMessage = contactMessage
-        this.contactNameErr = contactNameErr
-        this.contactEmailErr = contactEmailErr
-        this.contactMsgErr = contactMsgErr
-        this.contactForm = contactForm
-        this.contactNameValid = contactNameValid
-        this.contactEmailValid = contactEmailValid
-        this.contactMessageValid = contactMessageValid
-    }
+    // constructor(contactName, contactEmail, contactMessage, contactNameErr, contactEmailErr, contactMsgErr, contactNameValid, contactEmailValid, contactMessageValid) {
+    //     // Get input fields
+    //     this.contactName = contactName
+    //     this.contactEmail = contactEmail
+    //     this.contactMessage = contactMessage
+    //     // this.contactNameErr = contactNameErr
+    //     // this.contactEmailErr = contactEmailErr
+    //     // this.contactMsgErr = contactMsgErr
+    //     // this.contactForm = contactForm
+    //     // this.contactNameValid = contactNameValid
+    //     // this.contactEmailValid = contactEmailValid
+    //     // this.contactMessageValid = contactMessageValid
+    // }
     // Input fields
-    static contactName = document.getElementById("contactName");
-    static contactEmail = document.getElementById("contactEmail");
-    static contactMessage = document.getElementById("contactMessage");
+    static name = document.getElementById("contactName");
+    static email = document.getElementById("contactEmail");
+    static message = document.getElementById("contactMessage");
     
     // Error fields
-    static contactNameErr = document.querySelector(".contactNameInvalid");
-    static contactEmailErr = document.querySelector(".contactEmailInvalid");
-    static contactMsgErr = document.querySelector(".contactMessageInvalid");
+    static nameErr = document.querySelector(".contactNameInvalid");
+    static emailErr = document.querySelector(".contactEmailInvalid");
+    static messageErr = document.querySelector(".contactMessageInvalid");
     
     // Form
     static contactForm = document.getElementById("contactForm");
     
     // IsValid
-    static contactNameValid = false;
-    static contactEmailValid = false;
-    static contactMessageValid = false;
+    static nameValid = false;
+    static emailValid = false;
+    static messageValid = false;
+
+    // Send button
+    static sendBtn = document.getElementById("contactSendBtn");
 }
 
 export class LoginVars {
-    constructor(loginEmail, loginPassword) {
-        this.loginEmail = loginEmail
-        this.loginPassword = loginPassword
-    }
+    // constructor(loginEmail, loginPassword) {
+    //     this.loginEmail = loginEmail
+    //     this.loginPassword = loginPassword
+    // }
 
     // Input fields
-    static loginEmail = document.getElementById("loginEmail");
-    static loginPassword = document.getElementById("loginPassword");
+    static email = document.getElementById("loginEmail");
+    static password = document.getElementById("loginPassword");
 
     // Error fields
-    static loginEmailErr = document.querySelector(".loginEmailInvalid");
-    static loginPasswordErr = document.querySelector(".loginPasswordInvalid");
+    static emailErr = document.querySelector(".loginEmailInvalid");
+    static passwordErr = document.querySelector(".loginPasswordInvalid");
 
     // IsValid
-    static loginEmailValid = false;
-    static loginPasswordValid = false;
+    static emailValid = false;
+    static passwordValid = false;
+
+    // Login button
+    static loginBtn = document.getElementById("loginButton");
+}
+
+export class RegVars {
+    // constructor(firstName, lastName, email, password) {
+    //     this.firstName = firstName
+    //     this.lastName = lasttName
+    //     this.email = email
+    //     this.password = password
+    // }
+
+    static firstName = document.getElementById("firstName");
+    static laststName = document.getElementById("lastName");
+    static email = document.getElementById("registrationEmail");
+    static password = document.getElementById("registrationPassword");
 }
