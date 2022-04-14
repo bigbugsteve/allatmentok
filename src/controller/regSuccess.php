@@ -19,10 +19,5 @@
 	}
 	$sql = "INSERT INTO user (id, firstName, lastName, gender, email, password) VALUES ('0', '$firstName', '$lastName', '$gender', '$email', '$password')";
 	$rs = mysqli_query($conn, $sql);
-	if($rs)
-	{
-		echo "kesz";
-	}
 	mysqli_close($conn);
-
 ?>
