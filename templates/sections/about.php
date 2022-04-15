@@ -1,10 +1,10 @@
 
 <div class="about__container bg-purple text-white">
     <div class="about__wrapper d-flex mw-hd m-auto">
-        <div class="about__logo w-25 d-flex ">
+        <div class="about__logo w-25">
             <img src="assets/images/tetovalt_logo.png" alt="" class="w-75 m-auto">
         </div>
-        <div class="about__text p-5 w-75">
+        <div class="about__text p-5">
             <h2 class="section-title">A Tetovált Állatmentők</h2>
             <article class="about__article">
                 <p class="about__article-text">

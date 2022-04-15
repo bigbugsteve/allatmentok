@@ -1,0 +1,14 @@
+.about__ {
+    &logo {
+        display: none;
+        @media(min-width: 768px) {
+            display: flex;
+        }
+    }
+    &text {
+        text-align: center;
+        @media(min-width: 768px) {
+            width: 75%;
+        }
+    }
+}

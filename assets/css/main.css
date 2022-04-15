@@ -44,6 +44,11 @@
           justify-content: space-between;
 }
 
+.page__wrapper {
+  height: 100%;
+  position: relative;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -76,6 +81,22 @@ a:hover {
   margin: 0;
   padding: 0;
   padding-bottom: .1rem;
+}
+
+.map__frame iframe {
+  max-height: 50vh;
+}
+
+.map__location-text {
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .map__location-text {
+    border-radius: 0px;
+    margin: 0;
+  }
 }
 
 .text-white {
@@ -208,6 +229,7 @@ a:hover {
 .help__list-group li div:nth-child(1) {
   font-size: 1.3rem;
   color: #2d2e82;
+  margin: .5rem auto;
 }
 
 .help__icon {
@@ -351,4 +373,26 @@ a:hover {
 .registrationEmailInvalid.visible,
 .registrationPasswordInvalid.visible {
   display: block;
+}
+
+.about__logo {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .about__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.about__text {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about__text {
+    width: 75%;
+  }
 }

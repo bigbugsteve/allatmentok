@@ -2,7 +2,12 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      // overflow-x: hidden;
       justify-content: space-between;
+}
+.page__wrapper {
+      height: 100%;
+      position: relative;
 }
 
 a {
@@ -35,4 +40,16 @@ a {
       margin: 0;
       padding: 0;
       padding-bottom: .1rem;
+}
+
+.map__frame iframe {
+      max-height: 50vh;
+}
+.map__location-text {
+      margin: 1rem;
+      border-radius: 5px;
+      @media(min-width: 768px) {
+            border-radius: 0px;
+            margin: 0;
+      }
 }
