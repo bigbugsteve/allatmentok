@@ -31,7 +31,6 @@
 }
 
 .page__container {
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,6 +41,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .page__container {
+    min-height: 100vh;
+  }
 }
 
 .page__wrapper {
@@ -96,6 +101,26 @@ a:hover {
   .map__location-text {
     border-radius: 0px;
     margin: 0;
+  }
+}
+
+.mobile-d-none {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-d-none {
+    display: block;
+  }
+}
+
+.only-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .only-mobile {
+    display: none;
   }
 }
 

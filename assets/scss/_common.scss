@@ -1,9 +1,11 @@
 .page__container {
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       // overflow-x: hidden;
       justify-content: space-between;
+      @media(min-width: 768px) {
+            min-height: 100vh;
+      }
 }
 .page__wrapper {
       height: 100%;
@@ -51,5 +53,18 @@ a {
       @media(min-width: 768px) {
             border-radius: 0px;
             margin: 0;
+      }
+}
+
+.mobile-d-none {
+      display: none;
+      @media(min-width: 768px) {
+            display: block;
+      }
+}
+.only-mobile {
+      display: block;
+      @media(min-width: 768px) {
+            display: none;
       }
 }

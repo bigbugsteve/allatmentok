@@ -1,6 +1,8 @@
 <div class="bg-purple text-white text-center text-size-large p-0 m-0 mb-2">
     <h1 class="page-title">Üzenetek</h1>
 </div>
+<div class="w-100">
+
 <?php
     $dbserver = getenv('DB_HOST_LOCAL');
     $db = getenv('DB_DATABASE');
@@ -29,8 +31,8 @@
             <th>Név</th>
             <th>E-mail</th>
             <th>Üzenet</th>
-            <th>Dátum</th>
-            <th>Szerző</th>
+            <th class='mobile-d-none'>Dátum</th>
+            <th class='mobile-d-none'>Szerző</th>
         </tr>
         </thead>";
 
@@ -41,10 +43,11 @@
             <td>$row[name]</td>
             <td>$row[email]</td>
             <td>$row[message]</td>
-            <td>$row[date]</td>
-            <td>$row[anonym]</td>
+            <td class='mobile-d-none'>$row[date]</td>
+            <td class='mobile-d-none'>$row[anonym]</td>
             </tr>";
         }
         echo "</table>";
     // $res = $query;
-    mysqli_close($conn);
+    mysqli_close($conn); ?>
+</div>
