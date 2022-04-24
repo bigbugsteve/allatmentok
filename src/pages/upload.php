@@ -38,7 +38,7 @@ if(!isset($_SESSION['login'])){
 ?>
 
 <div class="bg-purple text-white text-center text-size-large p-0 m-0 mb-2">
-    <h1 class="page-title">Galéria</h1>
+    <h1 class="page-title">Feltöltés</h1>
 </div>
 
 <div class="global-container">
