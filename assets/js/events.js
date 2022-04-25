@@ -14,19 +14,16 @@ import ValidateFields from './validation.js';
     const contactNameEvent = ContactVars.name?.addEventListener("input", (e) => {
         ContactVars.nameValid = ValidateFields.validateName(e);
         ContactVars.nameValid && ContactVars.nameErr?.classList.remove("visible");
-        // const formValid = ValidateFields.validateForm(ContactVars.nameValid, ContactVars.contactEmailValid, ContactVars.contactMessageValid);
         contactFormValidation();
     });
     const contactEmailEvent = ContactVars.email?.addEventListener("input", (e) => {
         ContactVars.emailValid = ValidateFields.validateEmail(e);
         ContactVars.emailValid && ContactVars.emailErr?.classList.remove("visible");
-        // ValidateFields.validateContactForm(ContactVars.nameValid, ContactVars.emailValid, ContactVars.messageValid);
         contactFormValidation();
     });
     const contactMessageEvent = ContactVars.message?.addEventListener("input", (e) => {
         ContactVars.messageValid = ValidateFields.validateMessage(e);
         ContactVars.messageValid && ContactVars.messageErr?.classList.remove("visible");
-        // ValidateFields.validateContactForm(ContactVars.nameValid, ContactVars.emailValid, ContactVars.messageValid);
         contactFormValidation();
     });
 
@@ -43,7 +40,6 @@ import ValidateFields from './validation.js';
         LoginVars.emailValid = ValidateFields.validateEmail(e);
         LoginVars.emailValid && LoginVars.emailErr?.classList.remove("visible");
         loginFormValidation()
-        // ValidateFields.validateContactForm(LoginVars.loginEmailValid, LoginVars.LoginPasswordageValid);
     })
     const loginPasswordEvent = LoginVars.password?.addEventListener("input", (e) => {
         LoginVars.passwordValid = ValidateFields.validatePassword(e);
@@ -78,7 +74,6 @@ import ValidateFields from './validation.js';
         registrationFormValidation()
     })
     const registrationPasswordEvent = RegVars.password?.addEventListener("input", (e) => {
-        console.log("event")
         RegVars.passwordValid = ValidateFields.validatePassword(e);
         RegVars.passwordValid && RegVars.passwordErr.classList.remove("visible");
         registrationFormValidation()
@@ -120,13 +115,10 @@ LoginVars.password?.addEventListener("blur", (e) => {
         LoginVars.passwordErr.classList.remove("visible");
     }
 });
-
 RegVars.email?.addEventListener("blur", (e) => {
     if(RegVars.emailValid === false) {
-        console.log("MI?")
         RegVars.emailErr?.classList.add("visible");
     } else {
-        console.log("MI?2")
         RegVars.emailErr?.classList.remove("visible");
     }
 });
@@ -145,7 +137,6 @@ RegVars.lastName?.addEventListener("blur", (e) => {
     }
 });
 RegVars.password?.addEventListener("blur", (e) => {
-    console.log("blur")
     if(RegVars.passwordValid === false) {
         RegVars.passwordErr?.classList.add("visible");
     } else {
