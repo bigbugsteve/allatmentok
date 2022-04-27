@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 <?php if (file_exists('src/controller/' . $currentPage['file'] . '.php')) {
-	include("src/controller/{$currentPage['file']}.php");
-    
+    include("src/controller/{$currentPage['file']}.php");
 } else echo "";
 
 ?>
@@ -23,10 +22,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tetovált Állatmentők</title>
     <style>
-    body {
-        position: relative;
-        min-height: 100vh;
-    }
+        body {
+            position: relative;
+            min-height: 100vh;
+        }
     </style>
 </head>
 
@@ -34,11 +33,11 @@
     <div class="page__container">
         <div class="page__wrapper">
             <?php include("templates/layout/navigation.php"); ?>
-    
+
             <div class="wrapper">
                 <?php include("{$currentPage['file']}.php") ?>
             </div>
-            
+
             <?php include("templates/layout/footer.php"); ?>
         </div>
     </div>
