@@ -12,10 +12,9 @@ if (isset($_GET['page'])) {
 	}
 
 	else { 
-		$currentPage = $hiba_oldal;
+		$currentPage = $not_found_page;
 		header("HTTP/1.0 404 Not Found");
 	}
 }
 
-include('./src/pages/index.php'); 
-?>
+include('./src/pages/index.php');
