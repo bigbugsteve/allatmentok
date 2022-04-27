@@ -5,7 +5,6 @@
 			<div class="card-text">
 				<form action="?page=loggedIn" method="post">
 					<div class="form-group">
-						<!-- TODO hivatkozások és nevek átnevezése -> loginName -->
 						<label for="email">Email</label>
 						<input type="email" name="email" class="form-control form-control-sm" id="loginEmail" aria-describedby="emailHelp">
 						<div class="loginEmailInvalid">Nem megfelelő formátum</div>

@@ -1,4 +1,3 @@
-// TODO validációk
 export default class ValidateFields {
       static validateName(e) {
         // console.log("hello validate name", e.target.value)
