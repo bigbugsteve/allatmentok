@@ -25,11 +25,29 @@
   color: #fff !important;
 }
 
+.navbar-collapse {
+  padding-top: 2rem;
+}
+
 .navbar-nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+}
+
+.navbar .container {
+  width: 100% !important;
+}
+
+.navbar-brand img {
+  width: 200px;
+}
+
+@media (min-width: 768px) {
+  .navbar-brand {
+    width: 250px;
+  }
 }
 
 .page__container {
@@ -437,9 +455,7 @@ body {
 
 .container {
   width: 100vw;
-  font-family: "Poppins", sans-serif;
   position: relative;
-  left: 6vmin;
   text-align: center;
 }
 
