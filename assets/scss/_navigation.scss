@@ -21,7 +21,23 @@
         // }
     }
 } 
+.navbar-collapse {
+    padding-top: 2rem;
+}
 .navbar-nav {
     justify-content: space-between;
     width: 100%;
+}
+.navbar {
+    .container {
+        width: 100% !important;
+    }
+}
+.navbar-brand {
+    img {
+        width: 200px;
+    }
+    @media(min-width:768px) {
+        width: 250px;
+    }
 }

@@ -17,7 +17,7 @@ $lablec = array(
 
 $IMAGES = 'assets/images/';
 $GALLERY = 'assets/images/gallery/';
-$TYPES = array ('.jpg', '.png');
+$TYPES = array('.jpg', '.png');
 
 $pages = array(
       '/' => array('file' => 'home', 'text' => 'Főoldal', 'menun' => array(1, 1)),
@@ -34,6 +34,4 @@ $pages = array(
       'regSuccess' => array('file' => 'regSuccess', 'text' => '', 'menun' => array(0, 0)),
 );
 
-$hiba_oldal = array('file' => '404', 'text' => 'A keresett oldal nem található!');
-
-
+$not_found_page = array('file' => '404', 'text' => 'A keresett oldal nem található!');
