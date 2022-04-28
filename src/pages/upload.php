@@ -53,7 +53,8 @@ if(!isset($_SESSION['login'])){
                 <input type="file" name="harmadik">
             </label><br><br>
             <input type="submit" name="send">
-        </form>    
+        </form>
+        Max. felbontás: 500*1024 px
 
         <?php
         if (!empty($message))

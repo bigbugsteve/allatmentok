@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Ápr 04. 19:59
+-- Létrehozás ideje: 2022. Ápr 28. 10:27
 -- Kiszolgáló verziója: 10.4.22-MariaDB
--- PHP verzió: 7.4.28
+-- PHP verzió: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,8 +32,8 @@ CREATE TABLE `contact` (
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `message` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
-  `anonym` tinyint(1) NOT NULL,
-  `date` int(30) NOT NULL
+  `anonym` varchar(50) NOT NULL,
+  `date` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -41,13 +41,10 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `name`, `email`, `message`, `anonym`, `date`) VALUES
-(3, 'Kovacs Adam', 'ado.kovacs@gmail.com', 'Ez egy teszt uzenet.', 0, 0),
-(4, 'Kovacs Adam', 'ado.kovacs@gmail.com', 'Masodik teszt uzenet.', 0, 0),
-(5, 'gaba1', 'gaba@gaba.hu', 'sdfadsfasdf', 0, 0),
-(6, 'asdasdasd', 'bruxblank@gmail.com', 'asdasd', 0, 2022),
-(7, 'Emmanuel Gaines', 'nocec@mailinator.com', 'Temporibus fugit eo', 0, 0),
-(8, 'Devin Myers', 'wyryvyj@mailinator.com', 'Amet cupidatat volu', 0, 1648853308),
-(9, 'Portia Ferguson', 'gygas@mailinator.com', 'Deserunt dicta quae ', 0, 1648853586);
+(12, 'Kovacs Adam', 'ado.kovacs@gmail.com', 'Ez egy teszt uzenet.', 'Vendég', '2022-04-28 10:15'),
+(13, 'Kovacs Adam', 'ado.kovacs@gmail.com', 'Ez egy teszt uzenet. 2', 'Vendég', '2022-04-28 10:16'),
+(14, 'Kovacs Adam', 'asd@asd.com', 'Ez egy teszt uzenet.', 'Felhasználó', '2022-04-28 10:16'),
+(15, 'Kovacs Adam', 'asd@asd.com', 'Ez egy teszt uzenet. 2', 'Felhasználó', '2022-04-28 10:17');
 
 -- --------------------------------------------------------
 
@@ -69,7 +66,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `firstName`, `lastName`, `gender`, `email`, `password`) VALUES
-(1, 'nagy', 'gabor', 'f', 'asd@asd.com', '123456');
+(12, 'Ádám', 'Kovács', 'm', 'asd@asd.com', '123456'),
+(13, 'Nagy', 'Gábor', 'm', 'asd1@asd.com', '123456');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -95,13 +93,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT a táblához `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT a táblához `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
